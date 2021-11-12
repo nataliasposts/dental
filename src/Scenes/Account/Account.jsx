@@ -29,7 +29,7 @@ const Account = (props) =>{
                             <li className={"account-list_item"}>
                             <Link to={PATHS.ACCOUNT(urlParams.userID)} className={"account-link"}>
                                 <div className={"list-item_title"}>
-                                    <SvgProfile className={"img"} />
+                                   
                                     <p>Account</p>
                                 </div>
                             </Link>                               
@@ -37,7 +37,7 @@ const Account = (props) =>{
                             <li className={"account-list_item"}>
                             <Link to={PATHS.APPOINTMENT(urlParams.userID)} className={"account-link"}>
                                 <div className={"list-item_title"}>
-                                    <SvgProfile className={"img"} />
+                                    
                                     <p>Appointments</p>
                                 </div>
                             </Link>                               

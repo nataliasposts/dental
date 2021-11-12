@@ -2,16 +2,15 @@ import React, { useContext } from 'react';
 import styled from "styled-components";
 import { loginValidator } from "./loginValidator";
 import { Formik, Form } from "formik";
-import { Link, useHistory } from "react-router-dom";
-import { userSelector } from "store/selector/userSelector";
-import { useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { newUserAdd } from "store/action/newUserAdd";
 import { loginedUser } from "api/instance";
-import { ROUTE, PATHS  } from "Rooting/routing";
+import {  PATHS  } from "Rooting/routing";
 import FormikInputLogin from '../../Formik/FormikInputLogin';
 import { ModalContext } from "../../../HOC/GlobalModalProvider";
 import ModalWindowRegistration from './ModalWindowRegistration';
+
 
 
 
@@ -67,10 +66,13 @@ const ModalWindowLogin = (props)=>{
                 } else if (data.email === formData.email && data.password === formData.password) {
                     dispatch(newUserAdd(data.Birthday, data.FirstName, data.SecondName, data.password, data.email, data.userID))
                     history.push(PATHS.APPOINTMENT(data.userID))
+                    setModalContent(false);
                 }
             })
 
     }
+
+
 
 
 

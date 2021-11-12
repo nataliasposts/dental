@@ -5,7 +5,7 @@ import styled from "styled-components";
 const StyledFormikTextarea = styled.div``;
 
 const FormikTextarea = (props) =>{
-    const [field, meta, helpers] = useField(props.name);
+    const [field, meta] = useField(props.name);
     return (
         <StyledFormikTextarea>
             <label>

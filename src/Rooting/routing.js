@@ -1,8 +1,6 @@
 export const ROUTE = {
     ACCOUNT: "/account/:userID",
     APPOINTMENT: "/account/:userID/appointment",
-    REGISTRATION: "/registration",
-    LOGIN: "/login"
 };
 
 export const PATHS = {

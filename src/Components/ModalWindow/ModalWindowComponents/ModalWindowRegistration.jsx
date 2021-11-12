@@ -4,7 +4,7 @@ import { Formik, Form } from "formik";
 import FormikInputLogin from '../../Formik/FormikInputLogin';
 import FormikData from "../../Formik/FormikData";
 import { useHistory } from "react-router-dom";
-import { ROUTE, PATHS  } from "Rooting/routing";
+import { PATHS  } from "Rooting/routing";
 import { useDispatch } from "react-redux";
 import { newUserAdd } from "store/action/newUserAdd";
 import { registeredUser } from "../../../api/instance";

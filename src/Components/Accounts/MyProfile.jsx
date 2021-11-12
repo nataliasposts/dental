@@ -1,5 +1,4 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import React, { useCallback, useContext, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { userSelector } from "../../store/selector/userSelector";
 import styled from "styled-components";
@@ -35,7 +34,7 @@ const MyProfile = (props) =>{
                         </h3>
                     </div>
                     <div className={"user-birthday"}>
-                        <h3 className={"birthday-title"}>Birthday</h3>
+                        <h3 className={"birthday-title"}>Birthday:</h3>
                         <div className={"birthday-date"}>
                             {user.birthday}
                         </div>

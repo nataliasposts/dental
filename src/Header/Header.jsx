@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React from "react";
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import logo from '../assets/img/logo.png'
@@ -9,13 +9,11 @@ const StyledHeader = styled.header`
 max-width: 100%;
 padding: 0 15px 0 15px;
 margin: auto;
-
 .header-container{
     max-width: 1230px;
     margin: auto;
     padding: 0 15px;
 }
-
 .header-row{
     display: flex;
     flex-direction: row;
@@ -90,4 +88,4 @@ const Header = (props) => {
     );
 };
 
-export default memo (Header);
+export default Header;

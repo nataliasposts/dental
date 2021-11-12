@@ -7,7 +7,7 @@ export const registeredUser = (Birthday, FirstName, SecondName, password, email)
         }
         const userID = Math.floor(Math.random() * 10000);
 
-        usersList.push({ Birthday, FirstName, SecondName, password, email, userID });
+        usersList.push({Birthday, FirstName, SecondName, password, email, userID });
         window.localStorage.setItem('registredUsersList', JSON.stringify(usersList));
         res({ data: userID });
     })

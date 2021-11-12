@@ -4,11 +4,23 @@ import AboutUs from "Scenes/AboutUs";
 import OurService from "Scenes/Service";
 import MainScene from "Scenes/Mainscene";
 import Contact from "../Scenes/Contact";
-import ModalWindowLogin from "../Components/ModalWindow/ModalWindowComponents/ModalWindowLogin";
+import { useSelector } from "react-redux";
+import { userSelector } from "../store/selector/userSelector";
 import { ROUTE } from "./routing";
+import AccountRouter from "./AccountRouter";
 
 
 const RootRouter = (props) =>{
+
+  const user = useSelector(userSelector);
+
+    const renderForLoggedInUser = (Scene) => {
+        if(!user.userID) {
+            return <Redirect to={"/"}/>
+        }
+        return (<Scene/> )
+    }
+
     return(
         <React.Fragment>
              <Switch>
@@ -27,8 +39,8 @@ const RootRouter = (props) =>{
                 <Route path={"/contact"}>
                   <Contact/>
                 </Route>
-                <Route path={"/login"}>
-                  <ModalWindowLogin/>
+                <Route path={ROUTE.ACCOUNT} >
+                    {renderForLoggedInUser(AccountRouter)}
                 </Route>
               </Switch>
         </React.Fragment>

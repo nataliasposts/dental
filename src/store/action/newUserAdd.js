@@ -9,9 +9,9 @@ export const newUserAdd = (Birthday, FirstName, SecondName, password, email, use
                 email: email,
                 password: password,
                 secondname: SecondName,
-                firstName: FirstName, 
+                firstname: FirstName, 
                 birthday: Birthday,
-                id: userID
+                id: userID,
             }
         })
 };
