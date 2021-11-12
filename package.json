@@ -1,0 +1,67 @@
+{
+  "name": "dental-web",
+  "version": "1.0.0",
+  "description": "Dental-web is my learning project",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "start": "webpack serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nataliasposts/dental.git"
+  },
+  "keywords": [
+    "dental",
+    "project",
+    "health",
+    "TMS",
+    "learning"
+  ],
+  "author": "Natallia Novik",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nataliasposts/dental/issues"
+  },
+  "homepage": "https://github.com/nataliasposts/dental#readme",
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.13.3",
+    "formik": "^2.2.9",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^5.3.0",
+    "redux": "^4.1.2",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-persist": "^6.0.0",
+    "source-map": "^0.7.3",
+    "styled-components": "^5.3.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-proposal-class-properties": "^7.16.0",
+    "@babel/plugin-transform-react-jsx-source": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "@babel/preset-react": "^7.16.0",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.1",
+    "@svgr/webpack": "^5.5.0",
+    "babel-loader": "^8.2.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.5.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "prettier": "2.4.1",
+    "react-refresh": "^0.10.0",
+    "sass": "^1.43.4",
+    "sass-loader": "^12.3.0",
+    "source-map-loader": "^3.0.0",
+    "style-loader": "^3.3.1",
+    "svg-inline-loader": "^0.8.2",
+    "webpack": "^5.61.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.4.0"
+  }
+}
