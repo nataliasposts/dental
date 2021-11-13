@@ -1534,7 +1534,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
-var StyledMyProfile = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n"])));
+var StyledMyProfile = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n.profile-row{\n    width: 100%;\n    display: flex;\n    flex-direction: column;\n}\n.profile-description{\n    padding: 30px;\n    margin-bottom: 30px;\n    display: flex;\n    flex-direction: row;\n    justify-content: space-around;\n    border-bottom: solid 2px #ff8000;\n}\n.firstname{\n    margin-right: 10px;\n}\n.birthday-title{\n    margin-bottom: 10px;\n}\n"])));
 _c = StyledMyProfile;
 
 var MyProfile = function MyProfile(props) {
@@ -1564,7 +1564,11 @@ var MyProfile = function MyProfile(props) {
     className: "profile-name"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", {
     className: "user-name"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, user.firstname), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, user.secondname))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: "firstname"
+  }, user.firstname), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: "secondname"
+  }, user.secondname))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "user-birthday"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", {
     className: "birthday-title"
@@ -2637,9 +2641,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _assets_img_logo_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/img/logo.png */ "./src/assets/img/logo.png");
+/* harmony import */ var _Rooting_routing__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Rooting/routing */ "./src/Rooting/routing.js");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
 
@@ -2651,7 +2656,8 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
-var StyledHeader = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].header(_templateObject || (_templateObject = _taggedTemplateLiteral(["\nmax-width: 100%;\npadding: 0 15px 0 15px;\nmargin: auto;\n.header-container{\n    max-width: 1230px;\n    margin: auto;\n    padding: 0 15px;\n}\n.header-row{\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    justify-content: space-between;\n    align-items: center;\n    margin: 0 -15px 0 -15px;\n    \n}\n.header-menu{\n    width: 50%;\n}\n.header-menu_items{\n    display: flex;\n    justify-content: space-evenly;\n    flex-direction: row;\n}\n.header-menu_item{\n    list-style-type: none;\n    margin-right: 15px;\n    :last-child {\n      margin-right: 0px;\n    }\n}\n.header-menu_link{\n    text-decoration: none;\n    font-size: 20px;\n    line-height: 20px;\n    color: rgb(42, 44, 49);\n    cursor: pointer;\n    font-family: 'Merriweather-Regular', sans-serif; \n}\n.header-logo_img{\n    width: 50%;\n}\n"])));
+
+var StyledHeader = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].header(_templateObject || (_templateObject = _taggedTemplateLiteral(["\nmax-width: 100%;\npadding: 0 15px 0 15px;\nmargin: auto;\nposition: relative;\nz-index: 11;\nbox-shadow: 0 0 10px rgb(0 0 0 / 10%);\n\n.header-container{\n    max-width: 1230px;\n    margin: auto;\n    padding: 0 15px;\n}\n.header-row{\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n    justify-content: space-between;\n    align-items: center;\n    margin: 0 -15px 0 -15px;\n    \n}\n.header-menu{\n    width: 50%;\n}\n.header-menu_items{\n    display: flex;\n    justify-content: space-evenly;\n    flex-direction: row;\n}\n.header-menu_item{\n    list-style-type: none;\n    margin-right: 15px;\n    :last-child {\n      margin-right: 0px;\n    }\n}\n.header-menu_link{\n    text-decoration: none;\n    font-size: 20px;\n    line-height: 20px;\n    color: rgb(42, 44, 49);\n    cursor: pointer;\n    font-family: 'Merriweather-Regular', sans-serif; \n}\n.header-logo_img{\n    width: 50%;\n}\n"])));
 _c = StyledHeader;
 
 var Header = function Header(props) {
@@ -2661,7 +2667,7 @@ var Header = function Header(props) {
     className: "header-row"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "header-logo"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
     to: "/",
     className: "header-logo_link"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
@@ -2673,30 +2679,30 @@ var Header = function Header(props) {
     className: "header-menu_items"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
     className: "header-menu_item"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
     to: "/main",
     className: "header-menu_link"
   }, "Main")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
     className: "header-menu_item"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
     to: "/aboutus",
     className: "header-menu_link"
   }, "About us")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
     className: "header-menu_item"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
     to: "/service",
     className: "header-menu_link"
   }, "Service")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
     className: "header-menu_item"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
-    to: "#",
-    className: "header-menu_link"
-  }, "Opinions")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
-    className: "header-menu_item"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
     to: "/contact",
     className: "header-menu_link"
-  }, "Contact")))))));
+  }, "Contact")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    className: "header-menu_item"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
+    to: _Rooting_routing__WEBPACK_IMPORTED_MODULE_2__.PATHS.PROFILE,
+    className: "header-menu_link"
+  }, "Account")))))));
 };
 
 _c2 = Header;
@@ -2805,7 +2811,7 @@ __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/r
 
 var AccountRouter = function AccountRouter(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Scenes_Account_Account__WEBPACK_IMPORTED_MODULE_1__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Route, {
-    path: _routing__WEBPACK_IMPORTED_MODULE_4__.ROUTE.ACCOUNT
+    path: _routing__WEBPACK_IMPORTED_MODULE_4__.ROUTE.PROFILE
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Components_Accounts_MyProfile__WEBPACK_IMPORTED_MODULE_2__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Route, {
     path: _routing__WEBPACK_IMPORTED_MODULE_4__.ROUTE.APPOINTMENT
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Components_Accounts_Appointment__WEBPACK_IMPORTED_MODULE_3__["default"], null)));
@@ -2948,6 +2954,7 @@ __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/r
 
 var ROUTE = {
   ACCOUNT: "/account/:userID",
+  PROFILE: "/account/:userID/profile",
   APPOINTMENT: "/account/:userID/appointment"
 };
 var PATHS = {
@@ -2956,6 +2963,9 @@ var PATHS = {
   },
   APPOINTMENT: function APPOINTMENT(id) {
     return "/account/".concat(id, "/appointment");
+  },
+  PROFILE: function PROFILE(id) {
+    return "/account/".concat(id, "/profile");
   }
 };
 
@@ -3085,7 +3095,7 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
-var StyledAccount = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n"])));
+var StyledAccount = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n.account-container{\n    max-width: 1170px;\n    padding: 0 15px;\n    margin: auto;\n    position: relative;\n    z-index: 1;\n}\n\n.account-row{\n    display: flex;\n    width: 100%;\n}\n.aside-account{\n    margin-top: 155px;\n    width: 25%;\n    padding: 15px 0;\n}\n.section{\n    width: 100%;\n    margin-top: 55px\n}\n.account-btn{\n    background: #ff8000;\n    color: #fff;\n    padding: 15px 20px;\n    font-size: 15px;\n    text-align: center;\n    text-transform: uppercase;\n    border: none;\n    border-radius: 50px;\n    padding: 10px 30px;\n    cursor: pointer;\n    border: none;\n    font-size: 14px;\n    margin-top: 55px;\n}\n.account-list_item{\n    margin-bottom: 15px;\n}\n.list-item_title{\n    font-size: 20px;\n    color: black;\n}\n"])));
 _c = StyledAccount;
 
 var Account = function Account(props) {
@@ -3113,7 +3123,7 @@ var Account = function Account(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
     className: "account-list_item"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Link, {
-    to: _Rooting_routing__WEBPACK_IMPORTED_MODULE_3__.PATHS.ACCOUNT(urlParams.userID),
+    to: _Rooting_routing__WEBPACK_IMPORTED_MODULE_3__.PATHS.PROFILE(urlParams.userID),
     className: "account-link"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "list-item_title"
@@ -57244,4 +57254,4 @@ function toString(value) {
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.10851b13212b3378918e.js.map
+//# sourceMappingURL=main.194a4dc7552e2cd1b95c.js.map

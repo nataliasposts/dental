@@ -4,6 +4,25 @@ import { userSelector } from "../../store/selector/userSelector";
 import styled from "styled-components";
 
 const StyledMyProfile = styled.div`
+.profile-row{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.profile-description{
+    padding: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: solid 2px #ff8000;
+}
+.firstname{
+    margin-right: 10px;
+}
+.birthday-title{
+    margin-bottom: 10px;
+}
 `
 
 const MyProfile = (props) =>{
@@ -29,8 +48,8 @@ const MyProfile = (props) =>{
                 <div className={"profile-description"}>
                     <div className={"profile-name"}>
                         <h3 className={"user-name"}>
-                            <span>{user.firstname}</span>
-                            <span>{user.secondname}</span>
+                            <span className={"firstname"}>{user.firstname}</span>
+                            <span className={"secondname"}>{user.secondname}</span>
                         </h3>
                     </div>
                     <div className={"user-birthday"}>

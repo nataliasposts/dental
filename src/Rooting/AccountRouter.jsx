@@ -9,7 +9,7 @@ import { PATHS, ROUTE } from "./routing";
 const AccountRouter = (props)=>{
     return(
         <Account>
-        <Route path={ROUTE.ACCOUNT}>
+        <Route path={ROUTE.PROFILE}>
             <MyProfile/>
         </Route>
         <Route path={ROUTE.APPOINTMENT}>

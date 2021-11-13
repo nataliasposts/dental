@@ -2,6 +2,7 @@ import React from "react";
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import logo from '../assets/img/logo.png'
+import { PATHS } from "../Rooting/routing";
 
 
 
@@ -9,6 +10,10 @@ const StyledHeader = styled.header`
 max-width: 100%;
 padding: 0 15px 0 15px;
 margin: auto;
+position: relative;
+z-index: 11;
+box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+
 .header-container{
     max-width: 1230px;
     margin: auto;
@@ -75,10 +80,10 @@ const Header = (props) => {
                                         <Link to="/service" className="header-menu_link">Service</Link>   
                                     </li>
                                     <li className={"header-menu_item"}>
-                                        <Link to="#" className="header-menu_link">Opinions</Link>
+                                        <Link to="/contact" className="header-menu_link">Contact</Link>
                                     </li>
                                     <li className={"header-menu_item"}>
-                                        <Link to="/contact" className="header-menu_link">Contact</Link>
+                                        <Link to={PATHS.PROFILE} className="header-menu_link">Account</Link>
                                     </li>
                                 </ul>
                             </nav>
