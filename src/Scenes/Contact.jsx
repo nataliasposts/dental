@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Formik, Form } from "formik";
-import FormikInputContact from "../Components/Formik/FormikInputContact";
+import FormikInputContact from "Components/Formik/FormikInputContact";
 import FormikTextarea from "Components/Formik/FormikTextarea";
 import FormikCheckbox from "Components/Formik/FormikCheckbox";
 import Phone from "assets/img/contact/phone.svg";

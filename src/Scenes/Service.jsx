@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { ModalContext } from "../HOC/GlobalModalProvider";
-import ModalWindowLogin from '../Components/ModalWindow/ModalWindowComponents/ModalWindowLogin';
+import { ModalContext } from "HOC/GlobalModalProvider";
+import ModalWindowLogin from 'Components/ModalWindow/ModalWindowComponents/ModalWindowLogin';
 
 
 const StyledOurService = styled.div`

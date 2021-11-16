@@ -1,16 +1,16 @@
 import React, { useContext } from 'react';
 import styled from "styled-components";
 import { Formik, Form } from "formik";
-import FormikInputLogin from '../../Formik/FormikInputLogin';
+import FormikInputLogin from "../../Formik/FormikInputLogin"
 import FormikData from "../../Formik/FormikData";
 import { useHistory } from "react-router-dom";
-import { PATHS  } from "Rooting/routing";
+import { PATHS  } from "Routing/routing";
 import { useDispatch } from "react-redux";
 import { newUserAdd } from "store/action/newUserAdd";
-import { registeredUser } from "../../../api/instance";
+import { registeredUser } from "api/instance";
 import { registrationValidator } from "./registrationValidator";
 import ModalWindowLogin from './ModalWindowLogin';
-import { ModalContext } from '../../../HOC/GlobalModalProvider';
+import { ModalContext } from 'HOC/GlobalModalProvider';
 
 const StyledModalWindowRegistration = styled.div`
 text-align: center;

@@ -1396,7 +1396,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _Layouts_MainLayout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Layouts/MainLayout */ "./src/Layouts/MainLayout.jsx");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _Rooting_Root__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Rooting/Root */ "./src/Rooting/Root.jsx");
+/* harmony import */ var _Routing_Root__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Routing/Root */ "./src/Routing/Root.jsx");
 /* harmony import */ var _HOC_GlobalStoreProvider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./HOC/GlobalStoreProvider */ "./src/HOC/GlobalStoreProvider.jsx");
 /* harmony import */ var _HOC_GlobalModalProvider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./HOC/GlobalModalProvider */ "./src/HOC/GlobalModalProvider.jsx");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
@@ -1410,7 +1410,7 @@ __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/r
 
 
 var App = function App(props) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.BrowserRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_HOC_GlobalStoreProvider__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_HOC_GlobalModalProvider__WEBPACK_IMPORTED_MODULE_4__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_MainLayout__WEBPACK_IMPORTED_MODULE_1__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Rooting_Root__WEBPACK_IMPORTED_MODULE_2__["default"], null))))));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.BrowserRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_HOC_GlobalStoreProvider__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_HOC_GlobalModalProvider__WEBPACK_IMPORTED_MODULE_4__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Layouts_MainLayout__WEBPACK_IMPORTED_MODULE_1__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Routing_Root__WEBPACK_IMPORTED_MODULE_2__["default"], null))))));
 };
 
 _c = App;
@@ -1508,7 +1508,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _store_selector_userSelector__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../store/selector/userSelector */ "./src/store/selector/userSelector.js");
+/* harmony import */ var store_selector_userSelector__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! store/selector/userSelector */ "./src/store/selector/userSelector.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
@@ -1540,7 +1540,7 @@ _c = StyledMyProfile;
 var MyProfile = function MyProfile(props) {
   _s2();
 
-  var userFind = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)(_store_selector_userSelector__WEBPACK_IMPORTED_MODULE_2__.userSelector);
+  var userFind = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)(store_selector_userSelector__WEBPACK_IMPORTED_MODULE_2__.userSelector);
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
       _useState2 = _slicedToArray(_useState, 2),
@@ -1624,9 +1624,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
-/* harmony import */ var _Rooting_routing__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../Rooting/routing */ "./src/Rooting/routing.js");
+/* harmony import */ var Routing_routing__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Routing/routing */ "./src/Routing/routing.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _store_selector_userSelector__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../store/selector/userSelector */ "./src/store/selector/userSelector.js");
+/* harmony import */ var store_selector_doctorSelector__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! store/selector/doctorSelector */ "./src/store/selector/doctorSelector.js");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
 
@@ -1648,12 +1648,8 @@ var Doctors = function Doctors(props) {
   _s();
 
   var history = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_5__.useHistory)();
-  var doctor = [{
-    doctorID: 9876,
-    doctorName: "Jon Tern",
-    doctorPosition: "dentist"
-  }];
   var urlParams = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_5__.useParams)();
+  var doctorList = (0,react_redux__WEBPACK_IMPORTED_MODULE_2__.useSelector)(store_selector_doctorSelector__WEBPACK_IMPORTED_MODULE_3__.doctorSelector);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(StyledDoctors, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "doctors-container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -1664,12 +1660,12 @@ var Doctors = function Doctors(props) {
     className: "description"
   }, "Choose a doctor")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
     className: "doctors-row"
-  }, doctor.map(function (doctorData, index) {
+  }, doctorList.map(function (doctorData, index) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
       key: index,
       className: "doctors",
       onClick: function onClick() {
-        history.push(_Rooting_routing__WEBPACK_IMPORTED_MODULE_1__.PATHS.DOCTOR_SCHEDULE(urlParams.userID, doctorData.doctorID));
+        history.push(Routing_routing__WEBPACK_IMPORTED_MODULE_1__.PATHS.DOCTOR_SCHEDULE(urlParams.userID, doctorData.doctorID));
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", {
       className: "doctors-name"
@@ -1679,8 +1675,8 @@ var Doctors = function Doctors(props) {
   }))));
 };
 
-_s(Doctors, "OkBF0DAGLuc4L6hTv9Nr/QOZQIc=", false, function () {
-  return [react_router_dom__WEBPACK_IMPORTED_MODULE_5__.useHistory, react_router_dom__WEBPACK_IMPORTED_MODULE_5__.useParams];
+_s(Doctors, "iuf/5q1L61MvXoiZkC5wnIF/6GE=", false, function () {
+  return [react_router_dom__WEBPACK_IMPORTED_MODULE_5__.useHistory, react_router_dom__WEBPACK_IMPORTED_MODULE_5__.useParams, react_redux__WEBPACK_IMPORTED_MODULE_2__.useSelector];
 });
 
 _c2 = Doctors;
@@ -2161,7 +2157,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var _HOC_GlobalModalProvider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../HOC/GlobalModalProvider */ "./src/HOC/GlobalModalProvider.jsx");
+/* harmony import */ var HOC_GlobalModalProvider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! HOC/GlobalModalProvider */ "./src/HOC/GlobalModalProvider.jsx");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
 
@@ -2179,7 +2175,7 @@ _c = StyledModalWindow;
 var ModalWindow = function ModalWindow(props) {
   _s();
 
-  var setModalContent = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_HOC_GlobalModalProvider__WEBPACK_IMPORTED_MODULE_1__.ModalContext);
+  var setModalContent = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(HOC_GlobalModalProvider__WEBPACK_IMPORTED_MODULE_1__.ModalContext);
   var children = props.children;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(StyledModalWindow, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "modal-container"
@@ -2242,9 +2238,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var store_action_newUserAdd__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! store/action/newUserAdd */ "./src/store/action/newUserAdd.js");
 /* harmony import */ var api_instance__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! api/instance */ "./src/api/instance.js");
-/* harmony import */ var Rooting_routing__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! Rooting/routing */ "./src/Rooting/routing.js");
+/* harmony import */ var Routing_routing__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! Routing/routing */ "./src/Routing/routing.js");
 /* harmony import */ var _Formik_FormikInputLogin__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../Formik/FormikInputLogin */ "./src/Components/Formik/FormikInputLogin.jsx");
-/* harmony import */ var _HOC_GlobalModalProvider__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../HOC/GlobalModalProvider */ "./src/HOC/GlobalModalProvider.jsx");
+/* harmony import */ var HOC_GlobalModalProvider__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! HOC/GlobalModalProvider */ "./src/HOC/GlobalModalProvider.jsx");
 /* harmony import */ var _ModalWindowRegistration__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ModalWindowRegistration */ "./src/Components/ModalWindow/ModalWindowComponents/ModalWindowRegistration.jsx");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
@@ -2274,7 +2270,7 @@ var ModalWindowLogin = function ModalWindowLogin(props) {
 
   var history = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_11__.useHistory)();
   var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_3__.useDispatch)();
-  var setModalContent = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_HOC_GlobalModalProvider__WEBPACK_IMPORTED_MODULE_8__.ModalContext);
+  var setModalContent = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(HOC_GlobalModalProvider__WEBPACK_IMPORTED_MODULE_8__.ModalContext);
 
   var LogedUser = function LogedUser(formData) {
     (0,api_instance__WEBPACK_IMPORTED_MODULE_5__.loginedUser)(formData.email).then(function (data) {
@@ -2284,7 +2280,7 @@ var ModalWindowLogin = function ModalWindowLogin(props) {
         alert('Invalid password');
       } else if (data.email === formData.email && data.password === formData.password) {
         dispatch((0,store_action_newUserAdd__WEBPACK_IMPORTED_MODULE_4__.newUserAdd)(data.Birthday, data.FirstName, data.SecondName, data.password, data.email, data.userID));
-        history.push(Rooting_routing__WEBPACK_IMPORTED_MODULE_6__.PATHS.APPOINTMENT(data.userID));
+        history.push(Routing_routing__WEBPACK_IMPORTED_MODULE_6__.PATHS.APPOINTMENT(data.userID));
         setModalContent(false);
       }
     });
@@ -2362,13 +2358,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Formik_FormikInputLogin__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Formik/FormikInputLogin */ "./src/Components/Formik/FormikInputLogin.jsx");
 /* harmony import */ var _Formik_FormikData__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Formik/FormikData */ "./src/Components/Formik/FormikData.jsx");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
-/* harmony import */ var Rooting_routing__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Rooting/routing */ "./src/Rooting/routing.js");
+/* harmony import */ var Routing_routing__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Routing/routing */ "./src/Routing/routing.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var store_action_newUserAdd__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! store/action/newUserAdd */ "./src/store/action/newUserAdd.js");
-/* harmony import */ var _api_instance__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../api/instance */ "./src/api/instance.js");
+/* harmony import */ var api_instance__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! api/instance */ "./src/api/instance.js");
 /* harmony import */ var _registrationValidator__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./registrationValidator */ "./src/Components/ModalWindow/ModalWindowComponents/registrationValidator.js");
 /* harmony import */ var _ModalWindowLogin__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ModalWindowLogin */ "./src/Components/ModalWindow/ModalWindowComponents/ModalWindowLogin.jsx");
-/* harmony import */ var _HOC_GlobalModalProvider__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../HOC/GlobalModalProvider */ "./src/HOC/GlobalModalProvider.jsx");
+/* harmony import */ var HOC_GlobalModalProvider__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! HOC/GlobalModalProvider */ "./src/HOC/GlobalModalProvider.jsx");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
 
@@ -2398,7 +2394,7 @@ var ModalWindowRegistration = function ModalWindowRegistration(props) {
 
   var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_5__.useDispatch)();
   var history = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_12__.useHistory)();
-  var setModalContent = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_HOC_GlobalModalProvider__WEBPACK_IMPORTED_MODULE_10__.ModalContext);
+  var setModalContent = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(HOC_GlobalModalProvider__WEBPACK_IMPORTED_MODULE_10__.ModalContext);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(StyledModalWindowRegistration, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "registration-title"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "Registration")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(formik__WEBPACK_IMPORTED_MODULE_1__.Formik, {
@@ -2410,10 +2406,10 @@ var ModalWindowRegistration = function ModalWindowRegistration(props) {
       Birthday: ''
     },
     onSubmit: function onSubmit(formData) {
-      (0,_api_instance__WEBPACK_IMPORTED_MODULE_7__.registeredUser)(formData.Birthday, formData.FirstName, formData.SecondName, formData.password, formData.email).then(function (_ref) {
+      (0,api_instance__WEBPACK_IMPORTED_MODULE_7__.registeredUser)(formData.Birthday, formData.FirstName, formData.SecondName, formData.password, formData.email).then(function (_ref) {
         var data = _ref.data;
         dispatch((0,store_action_newUserAdd__WEBPACK_IMPORTED_MODULE_6__.newUserAdd)(formData.Birthday, formData.FirstName, formData.SecondName, formData.password, formData.email, data));
-        history.push(Rooting_routing__WEBPACK_IMPORTED_MODULE_4__.PATHS.APPOINTMENT(data));
+        history.push(Routing_routing__WEBPACK_IMPORTED_MODULE_4__.PATHS.APPOINTMENT(data));
         setModalContent(false);
       });
     },
@@ -2608,7 +2604,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _Components_ModalWindow_ModalWindow__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Components/ModalWindow/ModalWindow */ "./src/Components/ModalWindow/ModalWindow.jsx");
+/* harmony import */ var Components_ModalWindow_ModalWindow__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Components/ModalWindow/ModalWindow */ "./src/Components/ModalWindow/ModalWindow.jsx");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
 
@@ -2641,7 +2637,7 @@ var GlobalModalProvider = function GlobalModalProvider(props) {
   var children = props.children;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(ModalContext.Provider, {
     value: setModalContent
-  }, modalContent && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Components_ModalWindow_ModalWindow__WEBPACK_IMPORTED_MODULE_1__["default"], null, modalContent), children);
+  }, modalContent && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Components_ModalWindow_ModalWindow__WEBPACK_IMPORTED_MODULE_1__["default"], null, modalContent), children);
 };
 
 _s2(GlobalModalProvider, "Z3OCAFizYNXHCXJhTGDPK6wDFuw=");
@@ -2742,7 +2738,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _assets_img_logo_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/img/logo.png */ "./src/assets/img/logo.png");
-/* harmony import */ var _Rooting_routing__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Rooting/routing */ "./src/Rooting/routing.js");
+/* harmony import */ var _Routing_routing__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Routing/routing */ "./src/Routing/routing.js");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
 
@@ -2798,7 +2794,7 @@ var Header = function Header(props) {
   }, "Contact")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
     className: "header-menu_item"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
-    to: _Rooting_routing__WEBPACK_IMPORTED_MODULE_2__.PATHS.PROFILE,
+    to: _Routing_routing__WEBPACK_IMPORTED_MODULE_2__.PATHS.PROFILE,
     className: "header-menu_link"
   }, "Account")))))));
 };
@@ -2880,9 +2876,9 @@ if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Pr
 
 /***/ }),
 
-/***/ "./src/Rooting/AccountRouter.jsx":
+/***/ "./src/Routing/AccountRouter.jsx":
 /*!***************************************!*\
-  !*** ./src/Rooting/AccountRouter.jsx ***!
+  !*** ./src/Routing/AccountRouter.jsx ***!
   \***************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -2896,7 +2892,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var Scenes_Account_Account__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Scenes/Account/Account */ "./src/Scenes/Account/Account.jsx");
 /* harmony import */ var Components_Accounts_MyProfile__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/Accounts/MyProfile */ "./src/Components/Accounts/MyProfile.jsx");
 /* harmony import */ var Components_Accounts_Appointment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/Accounts/Appointment */ "./src/Components/Accounts/Appointment.jsx");
-/* harmony import */ var _routing__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./routing */ "./src/Rooting/routing.js");
+/* harmony import */ var _routing__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./routing */ "./src/Routing/routing.js");
 /* harmony import */ var Components_Doctors_Doctors__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! Components/Doctors/Doctors */ "./src/Components/Doctors/Doctors.jsx");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
@@ -2943,9 +2939,9 @@ if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Pr
 
 /***/ }),
 
-/***/ "./src/Rooting/Root.jsx":
+/***/ "./src/Routing/Root.jsx":
 /*!******************************!*\
-  !*** ./src/Rooting/Root.jsx ***!
+  !*** ./src/Routing/Root.jsx ***!
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -2959,15 +2955,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var Scenes_AboutUs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Scenes/AboutUs */ "./src/Scenes/AboutUs.jsx");
 /* harmony import */ var Scenes_Service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Scenes/Service */ "./src/Scenes/Service.jsx");
 /* harmony import */ var Scenes_Mainscene__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Scenes/Mainscene */ "./src/Scenes/Mainscene.jsx");
-/* harmony import */ var _Scenes_Contact__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../Scenes/Contact */ "./src/Scenes/Contact.jsx");
+/* harmony import */ var Scenes_Contact__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Scenes/Contact */ "./src/Scenes/Contact.jsx");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _store_selector_userSelector__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../store/selector/userSelector */ "./src/store/selector/userSelector.js");
-/* harmony import */ var _routing__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./routing */ "./src/Rooting/routing.js");
-/* harmony import */ var _AccountRouter__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./AccountRouter */ "./src/Rooting/AccountRouter.jsx");
+/* harmony import */ var store_selector_userSelector__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! store/selector/userSelector */ "./src/store/selector/userSelector.js");
+/* harmony import */ var _routing__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./routing */ "./src/Routing/routing.js");
+/* harmony import */ var _AccountRouter__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./AccountRouter */ "./src/Routing/AccountRouter.jsx");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
-
-var _s = __webpack_require__.$Refresh$.signature();
 
 
 
@@ -2981,20 +2975,6 @@ var _s = __webpack_require__.$Refresh$.signature();
 
 
 var RootRouter = function RootRouter(props) {
-  _s();
-
-  var user = (0,react_redux__WEBPACK_IMPORTED_MODULE_5__.useSelector)(_store_selector_userSelector__WEBPACK_IMPORTED_MODULE_6__.userSelector);
-
-  var renderForLoggedInUser = function renderForLoggedInUser(Scene) {
-    if (!user.userID) {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Redirect, {
-        to: "/"
-      });
-    }
-
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Scene, null);
-  };
-
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Switch, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
     path: "/main"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Scenes_Mainscene__WEBPACK_IMPORTED_MODULE_3__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
@@ -3006,14 +2986,10 @@ var RootRouter = function RootRouter(props) {
     path: "/service"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Scenes_Service__WEBPACK_IMPORTED_MODULE_2__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
     path: "/contact"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Scenes_Contact__WEBPACK_IMPORTED_MODULE_4__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Scenes_Contact__WEBPACK_IMPORTED_MODULE_4__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Route, {
     path: _routing__WEBPACK_IMPORTED_MODULE_7__.ROUTE.ACCOUNT
-  }, renderForLoggedInUser(_AccountRouter__WEBPACK_IMPORTED_MODULE_8__["default"]))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_AccountRouter__WEBPACK_IMPORTED_MODULE_8__["default"], null))));
 };
-
-_s(RootRouter, "ODc3cjw/vvoWaLFqHWcEGODyOfo=", false, function () {
-  return [react_redux__WEBPACK_IMPORTED_MODULE_5__.useSelector];
-});
 
 _c = RootRouter;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (RootRouter);
@@ -3039,9 +3015,9 @@ if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Pr
 
 /***/ }),
 
-/***/ "./src/Rooting/routing.js":
+/***/ "./src/Routing/routing.js":
 /*!********************************!*\
-  !*** ./src/Rooting/routing.js ***!
+  !*** ./src/Routing/routing.js ***!
   \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -3191,8 +3167,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _store_action_logOutUser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../store/action/logOutUser */ "./src/store/action/logOutUser.js");
-/* harmony import */ var _Rooting_routing__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Rooting/routing */ "./src/Rooting/routing.js");
+/* harmony import */ var store_action_logOutUser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! store/action/logOutUser */ "./src/store/action/logOutUser.js");
+/* harmony import */ var Routing_routing__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Routing/routing */ "./src/Routing/routing.js");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
 
@@ -3218,7 +3194,7 @@ var Account = function Account(props) {
   var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch)();
 
   var logOut = function logOut() {
-    dispatch((0,_store_action_logOutUser__WEBPACK_IMPORTED_MODULE_2__.logOutUser)());
+    dispatch((0,store_action_logOutUser__WEBPACK_IMPORTED_MODULE_2__.logOutUser)());
     history.push("/main");
   };
 
@@ -3235,19 +3211,19 @@ var Account = function Account(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
     className: "account-list_item"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Link, {
-    to: _Rooting_routing__WEBPACK_IMPORTED_MODULE_3__.PATHS.PROFILE(urlParams.userID),
+    to: Routing_routing__WEBPACK_IMPORTED_MODULE_3__.PATHS.PROFILE(urlParams.userID),
     className: "account-link"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "list-item_title"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Account")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
     className: "account-list_item"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Link, {
-    to: _Rooting_routing__WEBPACK_IMPORTED_MODULE_3__.PATHS.APPOINTMENT(urlParams.userID),
+    to: Routing_routing__WEBPACK_IMPORTED_MODULE_3__.PATHS.APPOINTMENT(urlParams.userID),
     className: "account-link"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "list-item_title"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Appointments")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Link, {
-    to: _Rooting_routing__WEBPACK_IMPORTED_MODULE_3__.PATHS.DOCTOR(urlParams.userID),
+    to: Routing_routing__WEBPACK_IMPORTED_MODULE_3__.PATHS.DOCTOR(urlParams.userID),
     className: "account-link"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "list-item_title"
@@ -3304,7 +3280,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var formik__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! formik */ "./node_modules/formik/dist/formik.esm.js");
-/* harmony import */ var _Components_Formik_FormikInputContact__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Components/Formik/FormikInputContact */ "./src/Components/Formik/FormikInputContact.jsx");
+/* harmony import */ var Components_Formik_FormikInputContact__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/Formik/FormikInputContact */ "./src/Components/Formik/FormikInputContact.jsx");
 /* harmony import */ var Components_Formik_FormikTextarea__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/Formik/FormikTextarea */ "./src/Components/Formik/FormikTextarea.jsx");
 /* harmony import */ var Components_Formik_FormikCheckbox__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Components/Formik/FormikCheckbox */ "./src/Components/Formik/FormikCheckbox.jsx");
 /* harmony import */ var assets_img_contact_phone_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! assets/img/contact/phone.svg */ "./src/assets/img/contact/phone.svg");
@@ -3438,10 +3414,10 @@ var Contact = function Contact(props) {
       console.log("form submitted", values);
     },
     validate: customValidator
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(formik__WEBPACK_IMPORTED_MODULE_1__.Form, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Components_Formik_FormikInputContact__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(formik__WEBPACK_IMPORTED_MODULE_1__.Form, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Components_Formik_FormikInputContact__WEBPACK_IMPORTED_MODULE_2__["default"], {
     name: 'name',
     label: "Name"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Components_Formik_FormikInputContact__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Components_Formik_FormikInputContact__WEBPACK_IMPORTED_MODULE_2__["default"], {
     name: 'email',
     label: "Email adress"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Components_Formik_FormikTextarea__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -3498,8 +3474,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* harmony import */ var assets_img_firstscreen_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! assets/img/firstscreen.jpg */ "./src/assets/img/firstscreen.jpg");
-/* harmony import */ var _Components_ModalWindow_ModalWindowComponents_ModalWindowLogin__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Components/ModalWindow/ModalWindowComponents/ModalWindowLogin */ "./src/Components/ModalWindow/ModalWindowComponents/ModalWindowLogin.jsx");
-/* harmony import */ var _HOC_GlobalModalProvider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../HOC/GlobalModalProvider */ "./src/HOC/GlobalModalProvider.jsx");
+/* harmony import */ var Components_ModalWindow_ModalWindowComponents_ModalWindowLogin__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/ModalWindow/ModalWindowComponents/ModalWindowLogin */ "./src/Components/ModalWindow/ModalWindowComponents/ModalWindowLogin.jsx");
+/* harmony import */ var HOC_GlobalModalProvider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! HOC/GlobalModalProvider */ "./src/HOC/GlobalModalProvider.jsx");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
 
@@ -3519,7 +3495,7 @@ _c = StyledFirstscreen;
 var Firstscreen = function Firstscreen(props) {
   _s();
 
-  var setModalContent = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_HOC_GlobalModalProvider__WEBPACK_IMPORTED_MODULE_3__.ModalContext);
+  var setModalContent = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(HOC_GlobalModalProvider__WEBPACK_IMPORTED_MODULE_3__.ModalContext);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(StyledFirstscreen, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "firstscreen-container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -3535,7 +3511,7 @@ var Firstscreen = function Firstscreen(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "every day we bring hope and smile to the patient we serve")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
     className: "book-appointment_btn",
     onClick: function onClick() {
-      setModalContent( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Components_ModalWindow_ModalWindowComponents_ModalWindowLogin__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+      setModalContent( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Components_ModalWindow_ModalWindowComponents_ModalWindowLogin__WEBPACK_IMPORTED_MODULE_2__["default"], null));
     }
   }, "book appointment"))));
 };
@@ -3633,8 +3609,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var _HOC_GlobalModalProvider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../HOC/GlobalModalProvider */ "./src/HOC/GlobalModalProvider.jsx");
-/* harmony import */ var _Components_ModalWindow_ModalWindowComponents_ModalWindowLogin__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Components/ModalWindow/ModalWindowComponents/ModalWindowLogin */ "./src/Components/ModalWindow/ModalWindowComponents/ModalWindowLogin.jsx");
+/* harmony import */ var HOC_GlobalModalProvider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! HOC/GlobalModalProvider */ "./src/HOC/GlobalModalProvider.jsx");
+/* harmony import */ var Components_ModalWindow_ModalWindowComponents_ModalWindowLogin__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/ModalWindow/ModalWindowComponents/ModalWindowLogin */ "./src/Components/ModalWindow/ModalWindowComponents/ModalWindowLogin.jsx");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
 
@@ -3653,7 +3629,7 @@ _c = StyledOurService;
 var OurService = function OurService(props) {
   _s();
 
-  var setModalContent = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_HOC_GlobalModalProvider__WEBPACK_IMPORTED_MODULE_1__.ModalContext);
+  var setModalContent = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(HOC_GlobalModalProvider__WEBPACK_IMPORTED_MODULE_1__.ModalContext);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(StyledOurService, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "ourservice-container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -3699,7 +3675,7 @@ var OurService = function OurService(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
     className: "ourservice-btn",
     onClick: function onClick() {
-      setModalContent( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Components_ModalWindow_ModalWindowComponents_ModalWindowLogin__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+      setModalContent( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Components_ModalWindow_ModalWindowComponents_ModalWindowLogin__WEBPACK_IMPORTED_MODULE_2__["default"], null));
     }
   }, "book appointment")));
 };
@@ -3975,7 +3951,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux_persist__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-persist */ "./node_modules/redux-persist/es/index.js");
 /* harmony import */ var redux_persist_lib_storage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux-persist/lib/storage */ "./node_modules/redux-persist/lib/storage/index.js");
 /* harmony import */ var redux_persist_lib_stateReconciler_hardSet__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! redux-persist/lib/stateReconciler/hardSet */ "./node_modules/redux-persist/lib/stateReconciler/hardSet.js");
-/* harmony import */ var _reducer_rootReducer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./reducer/rootReducer */ "./src/store/reducer/rootReducer.js");
+/* harmony import */ var _reducer_userReducer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./reducer/userReducer */ "./src/store/reducer/userReducer.js");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
 
@@ -3986,15 +3962,37 @@ __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/r
 
 
 var newUser = [];
+var doctorList = [{
+  doctorID: 9876,
+  doctorName: "Jon Tern",
+  doctorPosition: "dentist"
+}, {
+  doctorID: 9877,
+  doctorName: "Mary Smith",
+  doctorPosition: "dentist"
+}, {
+  doctorID: 9878,
+  doctorName: "Alex Smirnov",
+  doctorPosition: "dentist"
+}, {
+  doctorID: 9879,
+  doctorName: "Anna Braun",
+  doctorPosition: "dentist"
+}];
 var initialState = {
-  user: newUser
+  userReducer: {
+    user: newUser
+  },
+  doctorReducer: {
+    doctor: doctorList
+  }
 };
 var persistConfig = {
   key: 'root',
   storage: redux_persist_lib_storage__WEBPACK_IMPORTED_MODULE_2__["default"],
   stateReconciler: redux_persist_lib_stateReconciler_hardSet__WEBPACK_IMPORTED_MODULE_3__["default"]
 };
-var persistedReducer = (0,redux_persist__WEBPACK_IMPORTED_MODULE_1__.persistReducer)(persistConfig, _reducer_rootReducer__WEBPACK_IMPORTED_MODULE_4__["default"]);
+var persistedReducer = (0,redux_persist__WEBPACK_IMPORTED_MODULE_1__.persistReducer)(persistConfig, _reducer_userReducer__WEBPACK_IMPORTED_MODULE_4__["default"]);
 var middlewares = [];
 var middlewareEnhancer = redux__WEBPACK_IMPORTED_MODULE_5__.applyMiddleware.apply(void 0, middlewares);
 var enhancers = [middlewareEnhancer];
@@ -4019,9 +4017,9 @@ if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Pr
 
 /***/ }),
 
-/***/ "./src/store/reducer/rootReducer.js":
+/***/ "./src/store/reducer/userReducer.js":
 /*!******************************************!*\
-  !*** ./src/store/reducer/rootReducer.js ***!
+  !*** ./src/store/reducer/userReducer.js ***!
   \******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -4042,7 +4040,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-var rootReducer = function rootReducer(state, action) {
+var userReducer = function userReducer(state, action) {
   var newUser = {};
 
   switch (action.type) {
@@ -4066,13 +4064,46 @@ var rootReducer = function rootReducer(state, action) {
       });
 
     default:
-      return _objectSpread(_objectSpread({}, state), {}, {
-        user: {}
-      });
+      return _objectSpread({}, state);
   }
 };
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (rootReducer);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (userReducer);
+
+const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
+const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
+	$ReactRefreshModuleId$
+);
+
+function $ReactRefreshModuleRuntime$(exports) {
+	if (false) {}
+}
+
+if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Promise) {
+	$ReactRefreshCurrentExports$.then($ReactRefreshModuleRuntime$);
+} else {
+	$ReactRefreshModuleRuntime$($ReactRefreshCurrentExports$);
+}
+
+/***/ }),
+
+/***/ "./src/store/selector/doctorSelector.js":
+/*!**********************************************!*\
+  !*** ./src/store/selector/doctorSelector.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "doctorSelector": () => (/* binding */ doctorSelector)
+/* harmony export */ });
+/* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
+__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
+
+var doctorSelector = function doctorSelector(store) {
+  return store.doctorReducer.doctor;
+};
 
 const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
 const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
@@ -4106,7 +4137,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
 
 var userSelector = function userSelector(store) {
-  return store.user;
+  return store.userReducer.user;
 };
 
 const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
@@ -57371,4 +57402,4 @@ function toString(value) {
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.1d8ea833264ca97a3b93.js.map
+//# sourceMappingURL=main.581c0fe22b080d03b7ed.js.map

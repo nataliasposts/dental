@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
 import { Link, useParams, useHistory } from "react-router-dom";
-import { logOutUser } from "../../store/action/logOutUser";
-import { PATHS } from "../../Rooting/routing";
+import { logOutUser } from "store/action/logOutUser";
+import { PATHS } from "Routing/routing";
 
 
 

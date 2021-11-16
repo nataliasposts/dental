@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import {useHistory, useParams} from "react-router-dom";
-import { PATHS } from "../../Rooting/routing";
+import { PATHS } from "Routing/routing";
 import {useSelector} from "react-redux";
-import { userSelector } from "../../store/selector/userSelector";
+import { doctorSelector } from "store/selector/doctorSelector";
 
 const StyledDoctors = styled.div`
 max-width: 100%;
@@ -29,8 +29,9 @@ max-width: 100%;
 
 const Doctors = (props) => {
     const history = useHistory();
-    const doctor = [{doctorID: 9876, doctorName: "Jon Tern", doctorPosition: "dentist"}];
     const urlParams = useParams();
+
+    const doctorList = useSelector(doctorSelector);
     
     return(
         <StyledDoctors>
@@ -41,7 +42,7 @@ const Doctors = (props) => {
                     <p className={"description"}>Choose a doctor</p>
                 </div>
                 <ul className={"doctors-row"}>
-                {doctor.map((doctorData, index) => {
+                {doctorList.map((doctorData, index) => {
                         return(
                           <li key={index}
                               className={"doctors"}

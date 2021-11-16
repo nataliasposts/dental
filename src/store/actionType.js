@@ -3,3 +3,4 @@ export const USER_ACTIONS = {
     logOut: 'log out user',
     logIn: 'login user'
 };
+

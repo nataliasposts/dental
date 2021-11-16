@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import background from 'assets/img/firstscreen.jpg'
-import ModalWindowLogin from "../Components/ModalWindow/ModalWindowComponents/ModalWindowLogin";
-import { ModalContext } from "../HOC/GlobalModalProvider";
+import ModalWindowLogin from "Components/ModalWindow/ModalWindowComponents/ModalWindowLogin";
+import { ModalContext } from "HOC/GlobalModalProvider";
 
 
 

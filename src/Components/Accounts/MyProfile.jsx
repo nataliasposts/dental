@@ -1,6 +1,6 @@
 import React, { useCallback, useContext, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { userSelector } from "../../store/selector/userSelector";
+import { userSelector } from "store/selector/userSelector";
 import styled from "styled-components";
 
 const StyledMyProfile = styled.div`

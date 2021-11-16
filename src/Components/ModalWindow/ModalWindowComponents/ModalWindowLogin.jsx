@@ -6,9 +6,9 @@ import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { newUserAdd } from "store/action/newUserAdd";
 import { loginedUser } from "api/instance";
-import {  PATHS  } from "Rooting/routing";
-import FormikInputLogin from '../../Formik/FormikInputLogin';
-import { ModalContext } from "../../../HOC/GlobalModalProvider";
+import {  PATHS  } from "Routing/routing";
+import FormikInputLogin from "../../Formik/FormikInputLogin"
+import { ModalContext } from "HOC/GlobalModalProvider";
 import ModalWindowRegistration from './ModalWindowRegistration';
 
 

@@ -1,6 +1,6 @@
 import React, { memo, useContext } from 'react';
 import styled from 'styled-components';
-import {ModalContext} from "../../HOC/GlobalModalProvider"
+import {ModalContext} from "HOC/GlobalModalProvider"
 
 const StyledModalWindow = styled.div`
 height: 100%;

@@ -1,7 +1,7 @@
 import React from "react";
 import MainLayout from "./Layouts/MainLayout";
 import { BrowserRouter } from 'react-router-dom';
-import RootRouter from "./Rooting/Root";
+import RootRouter from "./Routing/Root";
 import GlobalStoreProvider from "./HOC/GlobalStoreProvider";
 import GlobalModalProvider from "./HOC/GlobalModalProvider";
 
