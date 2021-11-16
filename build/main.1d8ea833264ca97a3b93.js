@@ -1610,6 +1610,104 @@ if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Pr
 
 /***/ }),
 
+/***/ "./src/Components/Doctors/Doctors.jsx":
+/*!********************************************!*\
+  !*** ./src/Components/Doctors/Doctors.jsx ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var _Rooting_routing__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../Rooting/routing */ "./src/Rooting/routing.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _store_selector_userSelector__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../store/selector/userSelector */ "./src/store/selector/userSelector.js");
+/* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
+__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
+
+var _templateObject,
+    _s = __webpack_require__.$Refresh$.signature();
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+
+
+
+
+
+
+var StyledDoctors = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\nmax-width: 100%;\n\n.aboutus-container{\n    max-width: 1230px;\n    margin: auto;\n    padding: 0 15px;\n}\n.title{\n    font-size: 40px;\n    color: #2f89fc;\n    text-transform: capitalize;\n    text-align: center;\n    margin-bottom: 20px;\n}\n.description{\n    text-align: center;\n    font-size: 20px;\n}\n\n"])));
+_c = StyledDoctors;
+
+var Doctors = function Doctors(props) {
+  _s();
+
+  var history = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_5__.useHistory)();
+  var doctor = [{
+    doctorID: 9876,
+    doctorName: "Jon Tern",
+    doctorPosition: "dentist"
+  }];
+  var urlParams = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_5__.useParams)();
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(StyledDoctors, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "doctors-container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "doctors-title"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", {
+    className: "title"
+  }, "Book the appointment"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    className: "description"
+  }, "Choose a doctor")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+    className: "doctors-row"
+  }, doctor.map(function (doctorData, index) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+      key: index,
+      className: "doctors",
+      onClick: function onClick() {
+        history.push(_Rooting_routing__WEBPACK_IMPORTED_MODULE_1__.PATHS.DOCTOR_SCHEDULE(urlParams.userID, doctorData.doctorID));
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", {
+      className: "doctors-name"
+    }, doctorData.doctorName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+      className: "doctors-position"
+    }, doctorData.doctorPosition));
+  }))));
+};
+
+_s(Doctors, "OkBF0DAGLuc4L6hTv9Nr/QOZQIc=", false, function () {
+  return [react_router_dom__WEBPACK_IMPORTED_MODULE_5__.useHistory, react_router_dom__WEBPACK_IMPORTED_MODULE_5__.useParams];
+});
+
+_c2 = Doctors;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Doctors);
+
+var _c, _c2;
+
+__webpack_require__.$Refresh$.register(_c, "StyledDoctors");
+__webpack_require__.$Refresh$.register(_c2, "Doctors");
+
+const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
+const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
+	$ReactRefreshModuleId$
+);
+
+function $ReactRefreshModuleRuntime$(exports) {
+	if (false) {}
+}
+
+if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Promise) {
+	$ReactRefreshCurrentExports$.then($ReactRefreshModuleRuntime$);
+} else {
+	$ReactRefreshModuleRuntime$($ReactRefreshCurrentExports$);
+}
+
+/***/ }),
+
 /***/ "./src/Components/Formik/FormikCheckbox.jsx":
 /*!**************************************************!*\
   !*** ./src/Components/Formik/FormikCheckbox.jsx ***!
@@ -2794,11 +2892,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
-/* harmony import */ var _Scenes_Account_Account__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Scenes/Account/Account */ "./src/Scenes/Account/Account.jsx");
-/* harmony import */ var _Components_Accounts_MyProfile__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Components/Accounts/MyProfile */ "./src/Components/Accounts/MyProfile.jsx");
-/* harmony import */ var _Components_Accounts_Appointment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Components/Accounts/Appointment */ "./src/Components/Accounts/Appointment.jsx");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var Scenes_Account_Account__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Scenes/Account/Account */ "./src/Scenes/Account/Account.jsx");
+/* harmony import */ var Components_Accounts_MyProfile__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/Accounts/MyProfile */ "./src/Components/Accounts/MyProfile.jsx");
+/* harmony import */ var Components_Accounts_Appointment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/Accounts/Appointment */ "./src/Components/Accounts/Appointment.jsx");
 /* harmony import */ var _routing__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./routing */ "./src/Rooting/routing.js");
+/* harmony import */ var Components_Doctors_Doctors__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! Components/Doctors/Doctors */ "./src/Components/Doctors/Doctors.jsx");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
 
@@ -2809,12 +2908,15 @@ __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/r
 
 
 
+
 var AccountRouter = function AccountRouter(props) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Scenes_Account_Account__WEBPACK_IMPORTED_MODULE_1__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Route, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Scenes_Account_Account__WEBPACK_IMPORTED_MODULE_1__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Route, {
     path: _routing__WEBPACK_IMPORTED_MODULE_4__.ROUTE.PROFILE
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Components_Accounts_MyProfile__WEBPACK_IMPORTED_MODULE_2__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Route, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Components_Accounts_MyProfile__WEBPACK_IMPORTED_MODULE_2__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Route, {
     path: _routing__WEBPACK_IMPORTED_MODULE_4__.ROUTE.APPOINTMENT
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Components_Accounts_Appointment__WEBPACK_IMPORTED_MODULE_3__["default"], null)));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Components_Accounts_Appointment__WEBPACK_IMPORTED_MODULE_3__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Route, {
+    path: _routing__WEBPACK_IMPORTED_MODULE_4__.ROUTE.DOCTOR
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Components_Doctors_Doctors__WEBPACK_IMPORTED_MODULE_5__["default"], null)));
 };
 
 _c = AccountRouter;
@@ -2955,7 +3057,11 @@ __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/r
 var ROUTE = {
   ACCOUNT: "/account/:userID",
   PROFILE: "/account/:userID/profile",
-  APPOINTMENT: "/account/:userID/appointment"
+  APPOINTMENT: "/account/:userID/appointment",
+  DOCTOR: "/account/:userID/doctor",
+  DOCTOR_SCHEDULE: function DOCTOR_SCHEDULE(doctorID) {
+    return '/account/:userID/doctors/:doctorID';
+  }
 };
 var PATHS = {
   ACCOUNT: function ACCOUNT(id) {
@@ -2966,6 +3072,12 @@ var PATHS = {
   },
   PROFILE: function PROFILE(id) {
     return "/account/".concat(id, "/profile");
+  },
+  DOCTOR: function DOCTOR(id) {
+    return "/account/".concat(id, "/doctor");
+  },
+  DOCTOR_SCHEDULE: function DOCTOR_SCHEDULE(id, doctorID) {
+    return "/account/".concat(id, "/doctor/").concat(doctorID);
   }
 };
 
@@ -3134,7 +3246,12 @@ var Account = function Account(props) {
     className: "account-link"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "list-item_title"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Appointments")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Appointments")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Link, {
+    to: _Rooting_routing__WEBPACK_IMPORTED_MODULE_3__.PATHS.DOCTOR(urlParams.userID),
+    className: "account-link"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "list-item_title"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Doctors")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
     className: "account-list_item"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
     onClick: logOut,
@@ -57254,4 +57371,4 @@ function toString(value) {
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.194a4dc7552e2cd1b95c.js.map
+//# sourceMappingURL=main.1d8ea833264ca97a3b93.js.map

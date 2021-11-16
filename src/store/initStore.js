@@ -6,8 +6,10 @@ import hardSet from 'redux-persist/lib/stateReconciler/hardSet';
 import  rootReducer from './reducer/rootReducer';
 
 const newUser = [];
-
 const initialState = {user: newUser};
+
+
+
 
 const persistConfig = {
     key: 'root',
