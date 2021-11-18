@@ -92,13 +92,6 @@ const Account = (props) =>{
                                 </div>
                             </Link>                             
                             </li>
-                            <li>
-                            <Link to={PATHS.DOCTOR_SCHEDULE(urlParams.userID)} className={"account-link"}>
-                                <div className={"list-item_title"}>                                    
-                                    <p>Doctors</p>
-                                </div>
-                            </Link>                             
-                            </li>
                             <li className={"account-list_item"}>
                                 <button onClick={logOut} className={"account-btn"}>
                                     Log out
