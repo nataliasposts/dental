@@ -15,9 +15,9 @@ export const registeredUser = (Birthday, FirstName, SecondName, password, email)
 
 
 export const loginedUser = (email) => {
-    return new Promise((res, rej) => {
-        let usersList = JSON.parse(window.localStorage.getItem('registredUsersList'));
-        const userFind = usersList.find(user => user.email === email);
-        res(userFind);
-    })
+  return new Promise((res, rej) => {
+      let usersList = JSON.parse(window.localStorage.getItem('registredUsersList'));
+      const userFind = usersList.find(user => user.email === email);
+      res(userFind);
+  })
 }

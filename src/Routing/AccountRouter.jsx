@@ -5,7 +5,7 @@ import MyProfile from "Components/Accounts/MyProfile";
 import Appointment from "Components/Accounts/Appointment"
 import { PATHS, ROUTE } from "./routing";
 import Doctors from "Components/Doctors/Doctors";
-
+import DoctorSchedule from "../Components/Doctors/DoctorSchedule";
 
 const AccountRouter = (props)=>{
     return(
@@ -18,6 +18,9 @@ const AccountRouter = (props)=>{
         </Route>
         <Route path={ROUTE.DOCTOR}>
             <Doctors/>
+        </Route>
+        <Route path={ROUTE.DOCTOR_SCHEDULE}>
+            <DoctorSchedule/>
         </Route>
     </Account>
     )

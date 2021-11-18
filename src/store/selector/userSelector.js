@@ -1,4 +1,3 @@
 export const userSelector = store => {
-    return (store.userReducer.user);
+    return(store.userReducer.user)
 };
-

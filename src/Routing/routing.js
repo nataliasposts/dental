@@ -4,7 +4,7 @@ export const ROUTE = {
     PROFILE: "/account/:userID/profile",
     APPOINTMENT: "/account/:userID/appointment",
     DOCTOR: "/account/:userID/doctor",
-    DOCTOR_SCHEDULE: doctorID => '/account/:userID/doctors/:doctorID'
+    DOCTOR_SCHEDULE:  '/account/:userID/doctors'
 };
 
 export const PATHS = {
@@ -12,5 +12,5 @@ export const PATHS = {
     APPOINTMENT: id => `/account/${id}/appointment`,
     PROFILE: id => `/account/${id}/profile`,
     DOCTOR: id => `/account/${id}/doctor`,
-    DOCTOR_SCHEDULE: (id, doctorID) => `/account/${id}/doctor/${doctorID}`
+    DOCTOR_SCHEDULE: id => `/account/${id}`
 };

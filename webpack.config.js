@@ -55,11 +55,19 @@ module.exports = {
         ],
       },
       {
+        test: /\.txt$/,
+        exclude: /node_modules/,
+        use: [
+          'raw-loader',
+        ],
+      },
+      {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: [{loader: 'babel-loader', options: {plugins:[require.resolve('react-refresh/babel')]}}],
       },
     ],
+    
 },
   resolve: {
     modules: [
