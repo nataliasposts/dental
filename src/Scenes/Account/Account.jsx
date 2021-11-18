@@ -71,7 +71,7 @@ const Account = (props) =>{
                     <nav className={"account-nav"}>
                         <ul className={"account-list"}>
                             <li className={"account-list_item"}>
-                            <Link to={PATHS.PROFILE(urlParams.userID)} className={"account-link"}>
+                            <Link to={PATHS.PROFILE(urlParams.userId)} className={"account-link"}>
                                 <div className={"list-item_title"}>
                                    
                                     <p>Account</p>
@@ -79,14 +79,14 @@ const Account = (props) =>{
                             </Link>                               
                             </li>
                             <li className={"account-list_item"}>
-                            <Link to={PATHS.APPOINTMENT(urlParams.userID)} className={"account-link"}>
+                            <Link to={PATHS.APPOINTMENT(urlParams.userId)} className={"account-link"}>
                                 <div className={"list-item_title"}>                                   
                                     <p>Appointments</p>
                                 </div>
                             </Link>
                             </li> 
                             <li>
-                            <Link to={PATHS.DOCTOR(urlParams.userID)} className={"account-link"}>
+                            <Link to={PATHS.DOCTOR(urlParams.userId)} className={"account-link"}>
                                 <div className={"list-item_title"}>                                    
                                     <p>Doctors</p>
                                 </div>

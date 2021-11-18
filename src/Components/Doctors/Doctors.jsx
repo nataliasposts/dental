@@ -41,6 +41,18 @@ const Doctors = (props) => {
                     <h3 className={"title"}>Book the appointment</h3>
                     <p className={"description"}>Choose a doctor</p>
                 </div>
+                <ul className={"doctors-row"}>
+                {doctors.map((doctorData, index) => {
+                        return(
+                          <li key={index}
+                              className={"doctors"}
+                              onClick={() => {history.push(PATHS.DOCTOR_SCHEDULE(urlParams.userId, doctorData.doctorID))}}>
+                              <h4 className={"doctors-name"}>{doctorData.doctorName}</h4>
+                              <p className={"doctors-position"}>{doctorData.doctorPosition}</p>
+                          </li>
+                        )
+                    })}
+                </ul>
             </div>
         </StyledDoctors>
     )

@@ -60,9 +60,9 @@ const ModalWindowRegistration = (props)=>{
              initialValues={{ email: '', password: '', FirstName: '', SecondName: '', Birthday: '' }}
              onSubmit={(formData) => {
                 registeredUser(formData.Birthday, formData.FirstName, formData.SecondName, formData.password, formData.email)
-                .then(({ data }) => {
-                    dispatch(newUserAdd(formData.Birthday, formData.FirstName, formData.SecondName, formData.password, formData.email, data));
-                    history.push(PATHS.APPOINTMENT(data));
+                .then(({ dataId, dataLogged }) => {
+                    dispatch(newUserAdd(formData.Birthday, formData.FirstName, formData.SecondName, formData.password, formData.email, dataId, dataLogged));
+                    history.push(PATHS.APPOINTMENT(dataId));
                     setModalContent(false);
         })
             }}
@@ -83,4 +83,4 @@ const ModalWindowRegistration = (props)=>{
     )
 }
 
-export default ModalWindowRegistration;
+export default  ModalWindowRegistration;

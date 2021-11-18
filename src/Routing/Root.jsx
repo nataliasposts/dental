@@ -4,8 +4,6 @@ import AboutUs from "Scenes/AboutUs";
 import OurService from "Scenes/Service";
 import MainScene from "Scenes/Mainscene";
 import Contact from "Scenes/Contact";
-import { useSelector } from "react-redux";
-import { userSelector } from "store/selector/userSelector";
 import { ROUTE } from "./routing";
 import AccountRouter from "./AccountRouter"
 

@@ -55,6 +55,10 @@ module.exports = {
         ],
       },
       {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+      {
         test: /\.txt$/,
         exclude: /node_modules/,
         use: [
@@ -67,7 +71,6 @@ module.exports = {
         use: [{loader: 'babel-loader', options: {plugins:[require.resolve('react-refresh/babel')]}}],
       },
     ],
-    
 },
   resolve: {
     modules: [

@@ -1,10 +1,10 @@
 import { USER_ACTIONS } from "../actionType";
 
 
-export const newUserAdd = (Birthday, FirstName, SecondName, password, email, userId, userLoggedIn) => {
+export const logInUser = (Birthday, FirstName, SecondName, password, email, userId, userLoggedIn) => {
     return (
         {
-            type: USER_ACTIONS.addUser,
+            type: USER_ACTIONS.logIn,
             payload: {
                 email: email,
                 password: password,

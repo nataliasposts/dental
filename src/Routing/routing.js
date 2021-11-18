@@ -1,10 +1,11 @@
 
 export const ROUTE = {
-    ACCOUNT: "/account/:userID",
-    PROFILE: "/account/:userID/profile",
-    APPOINTMENT: "/account/:userID/appointment",
-    DOCTOR: "/account/:userID/doctor",
-    DOCTOR_SCHEDULE:  '/account/:userID/doctors/:doctorID'
+    MAIN: "/main",
+    ACCOUNT: "/account/:userId",
+    PROFILE: "/account/:userId/profile",
+    APPOINTMENT: "/account/:userId/appointment",
+    DOCTOR: "/account/:userId/doctor",
+    DOCTOR_SCHEDULE:  '/account/:userId/doctor/:doctorID'
 };
 
 export const PATHS = {

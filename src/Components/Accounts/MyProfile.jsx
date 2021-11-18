@@ -29,15 +29,13 @@ const MyProfile = (props) =>{
     const userFind = useSelector(userSelector);
     const [user, setUser] = useState('')
 
-
-console.log(userFind)
     useEffect(() => {
         new Promise((resolve, reject) => {
             resolve(
                 userFind
             )
         }).then((data) => {
-            if (data.userID) {
+            if (data.userId) {
                 setUser(data);
             } 
         })}, []);

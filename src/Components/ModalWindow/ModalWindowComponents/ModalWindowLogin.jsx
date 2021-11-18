@@ -4,8 +4,8 @@ import { loginValidator } from "./loginValidator";
 import { Formik, Form } from "formik";
 import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { newUserAdd } from "store/action/newUserAdd";
-import { loginedUser } from "api/instance";
+import { logInUser } from '../../../store/action/logInUser';
+import { loginUser } from '../../../api/instance';
 import {  PATHS  } from "Routing/routing";
 import FormikInputLogin from "../../Formik/FormikInputLogin"
 import { ModalContext } from "HOC/GlobalModalProvider";
@@ -55,24 +55,24 @@ const ModalWindowLogin = (props)=>{
    
 
 
-    const LogedUser = (formData) => {
-        loginedUser(formData.email)
-            .then((data) => {
-                if (!data) {
-                    alert('Invalid login');
-                } else if (data.email === formData.email && data.password !== formData.password) {
-                    alert('Invalid password');
-
-                } else if (data.email === formData.email && data.password === formData.password) {
-                    dispatch(newUserAdd(data.Birthday, data.FirstName, data.SecondName, data.password, data.email, data.userID))
-                    history.push(PATHS.APPOINTMENT(data.userID))
-                    setModalContent(false);
-                }
-            })
-
-    }
 
 
+        const LogedUser = (formData) => {
+            loginUser(formData.email)
+                .then((data) => {
+                    if (!data) {
+                        alert('Invalid login');
+                    } else if (data.email === formData.email && data.password !== formData.password) {
+                        alert('Invalid password');
+    
+                    } else if (data.email === formData.email && data.password === formData.password) {
+                        dispatch(logInUser(data.Birthday, data.FirstName, data.SecondName, data.password, data.email, data.userId, data.loggedIn))
+                        history.push(PATHS.APPOINTMENT(data.userId))
+                        setModalContent(false);
+                    }
+                })
+    
+        }
 
 
 

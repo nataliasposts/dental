@@ -5,19 +5,18 @@ export const registeredUser = (Birthday, FirstName, SecondName, password, email)
         if (!usersList) {
             usersList = [];
         }
-        const userID = Math.floor(Math.random() * 10000);
-
-        usersList.push({Birthday, FirstName, SecondName, password, email, userID });
+        const userId = Math.floor((Math.random() * 1000)+1);
+        const loggedIn = true;
+        usersList.push({Birthday, FirstName, SecondName, password, email, userId, loggedIn });
         window.localStorage.setItem('registredUsersList', JSON.stringify(usersList));
-        res({ data: userID });
+        res({ dataId: userId,  dataLogged: loggedIn});
     })
 };
 
-
-export const loginedUser = (email) => {
-  return new Promise((res, rej) => {
-      let usersList = JSON.parse(window.localStorage.getItem('registredUsersList'));
-      const userFind = usersList.find(user => user.email === email);
-      res(userFind);
-  })
-}
+export const loginUser = (email) => {
+    return new Promise((res, rej) => {
+        let usersList = JSON.parse(window.localStorage.getItem('registredUsersList'));
+        const userData = usersList.find(user => user.email === email);
+        res(userData);
+    })
+};

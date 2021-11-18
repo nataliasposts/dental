@@ -11,7 +11,8 @@ const userReducer = (state, action) =>{
                 secondname: action.payload.secondname,
                 firstname: action.payload.firstname,
                 birthday: action.payload.birthday,
-                userID: action.payload.id,
+                userId: action.payload.id,
+                loggedIn: action.payload.loggedIn,
             };
             return {...state, user: newUser };
 
@@ -19,6 +20,17 @@ const userReducer = (state, action) =>{
              newUser = {};
               return {...state, user: newUser };
         
+         case (USER_ACTIONS.logIn):
+            newUser = {
+                email: action.payload.email,
+                password: action.payload.password,
+                secondname: action.payload.secondname,
+                firstname: action.payload.firstname,
+                birthday: action.payload.birthday,
+                userId: action.payload.id,
+                loggedIn: action.payload.loggedIn,
+            };
+                return { ...state, user: newUser };
 
         default: return {...state}
     }

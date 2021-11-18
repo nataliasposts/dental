@@ -3,7 +3,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import hardSet from 'redux-persist/lib/stateReconciler/hardSet';
-import rootReducer from './reducer/userReducer';
+import rootReducer from './reducer/rootReducer';
 
 const newUser = [];
 const doctorList = [
