@@ -4,8 +4,9 @@ import Account from "Scenes/Account/Account";
 import MyProfile from "Components/Accounts/MyProfile";
 import Appointment from "Components/Accounts/Appointment"
 import { PATHS, ROUTE } from "./routing";
-import Doctors from "Components/Doctors/Doctors";
-import DoctorSchedule from "../Components/Doctors/DoctorSchedule"
+import Doctors from "../Components/Accounts/Doctors/Doctors";
+import DoctorSchedule from "../Components/Accounts/Doctors/DoctorSchedule";
+
 
 const AccountRouter = (props)=>{
     return(

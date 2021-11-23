@@ -117,7 +117,7 @@ const Header = (props) => {
                                     {(user.loggedIn === true)
                                     ? <li className={"header-menu_item"}> 
                                         <button className={"header-menu_link"} 
-                                        onClick={() => { moveToProfile(user.id)}}>
+                                        onClick={() => { moveToProfile(user.userId)}}>
                                             Account
                                         </button>
                                     </li>

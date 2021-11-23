@@ -1,9 +1,11 @@
-import React from "react";
+import React, {useEffect, useState } from "react";
 import styled from "styled-components";
 import {useHistory, useParams} from "react-router-dom";
-import { PATHS } from "Routing/routing";
+import { PATHS } from "../../../Routing/routing";
 import {useSelector} from "react-redux";
-import { doctorSelector } from "store/selector/doctorSelector";
+import { doctorSelector } from "../../../store/selector/doctorSelector";
+import DoctorSchedule from "./DoctorSchedule";
+
 
 const StyledDoctors = styled.div`
 max-width: 100%;
@@ -30,8 +32,9 @@ max-width: 100%;
 const Doctors = (props) => {
     const history = useHistory();
     const urlParams = useParams();
-
     const doctors = useSelector(doctorSelector);
+
+
     
     return(
         <StyledDoctors>
@@ -44,10 +47,11 @@ const Doctors = (props) => {
                 <ul className={"doctors-row"}>
                 {doctors.map((doctorData, index) => {
                         return(
-                          <li key={index}
-                              className={"doctors"}
+                          <li key={index} className={"doctors-li"}>
+                              <button type={"button"} className={"button"}
                               onClick={() => {history.push(PATHS.DOCTOR_SCHEDULE(urlParams.userId, doctorData.doctorID))}}>
-                              <h4 className={"doctors-name"}>{doctorData.doctorName}</h4>
+                              {doctorData.doctorName}                            
+                            </button>
                               <p className={"doctors-position"}>{doctorData.doctorPosition}</p>
                           </li>
                         )

@@ -4531,7 +4531,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _store_selector_doctorSelector__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../store/selector/doctorSelector */ "./src/store/selector/doctorSelector.js");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
 
@@ -4541,7 +4543,9 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
-var StyledAppointment = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral([""])));
+
+
+var StyledAppointment = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral([""])));
 _c = StyledAppointment;
 
 var Appointment = function Appointment(props) {
@@ -4549,7 +4553,9 @@ var Appointment = function Appointment(props) {
     className: "appointment-row"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "appointment-title"
-  }, "Appointments")));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
+    className: "user-appointment"
+  }))));
 };
 
 _c2 = Appointment;
@@ -4559,6 +4565,196 @@ var _c, _c2;
 
 __webpack_require__.$Refresh$.register(_c, "StyledAppointment");
 __webpack_require__.$Refresh$.register(_c2, "Appointment");
+
+const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
+const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
+	$ReactRefreshModuleId$
+);
+
+function $ReactRefreshModuleRuntime$(exports) {
+	if (false) {}
+}
+
+if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Promise) {
+	$ReactRefreshCurrentExports$.then($ReactRefreshModuleRuntime$);
+} else {
+	$ReactRefreshModuleRuntime$($ReactRefreshCurrentExports$);
+}
+
+/***/ }),
+
+/***/ "./src/Components/Accounts/Doctors/DoctorSchedule.jsx":
+/*!************************************************************!*\
+  !*** ./src/Components/Accounts/Doctors/DoctorSchedule.jsx ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_datepicker__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-datepicker */ "./node_modules/react-datepicker/dist/react-datepicker.min.js");
+/* harmony import */ var react_datepicker__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_datepicker__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var date_fns_setHours__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! date-fns/setHours */ "./node_modules/date-fns/esm/setHours/index.js");
+/* harmony import */ var date_fns_setMinutes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! date-fns/setMinutes */ "./node_modules/date-fns/esm/setMinutes/index.js");
+/* harmony import */ var react_datepicker_dist_react_datepicker_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-datepicker/dist/react-datepicker.css */ "./node_modules/react-datepicker/dist/react-datepicker.css");
+/* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
+__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
+
+var _s2 = __webpack_require__.$Refresh$.signature();
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+
+
+var DoctorSchedule = function DoctorSchedule(props) {
+  _s2();
+
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(),
+      _useState2 = _slicedToArray(_useState, 2),
+      startDate = _useState2[0],
+      setStartDate = _useState2[1];
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "schedule-row"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "schedule"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement((react_datepicker__WEBPACK_IMPORTED_MODULE_2___default()), {
+    selected: startDate,
+    onChange: function onChange(date) {
+      return setStartDate(date);
+    },
+    showTimeSelect: true,
+    minTime: (0,date_fns_setHours__WEBPACK_IMPORTED_MODULE_3__["default"])((0,date_fns_setMinutes__WEBPACK_IMPORTED_MODULE_4__["default"])(new Date(), 30), 8),
+    maxTime: (0,date_fns_setHours__WEBPACK_IMPORTED_MODULE_3__["default"])((0,date_fns_setMinutes__WEBPACK_IMPORTED_MODULE_4__["default"])(new Date(), 0), 20),
+    dateFormat: "MMMM d, yyyy h:mm aa",
+    placeholderText: "Select the date and time"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    className: "book-appointment"
+  }, "book appointment"));
+};
+
+_s2(DoctorSchedule, "NeEvXNq5VluTEoo3+jfTX8tYXN4=");
+
+_c = DoctorSchedule;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DoctorSchedule);
+
+var _c;
+
+__webpack_require__.$Refresh$.register(_c, "DoctorSchedule");
+
+const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
+const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
+	$ReactRefreshModuleId$
+);
+
+function $ReactRefreshModuleRuntime$(exports) {
+	if (false) {}
+}
+
+if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Promise) {
+	$ReactRefreshCurrentExports$.then($ReactRefreshModuleRuntime$);
+} else {
+	$ReactRefreshModuleRuntime$($ReactRefreshCurrentExports$);
+}
+
+/***/ }),
+
+/***/ "./src/Components/Accounts/Doctors/Doctors.jsx":
+/*!*****************************************************!*\
+  !*** ./src/Components/Accounts/Doctors/Doctors.jsx ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var _Routing_routing__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../Routing/routing */ "./src/Routing/routing.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _store_selector_doctorSelector__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../store/selector/doctorSelector */ "./src/store/selector/doctorSelector.js");
+/* harmony import */ var _DoctorSchedule__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./DoctorSchedule */ "./src/Components/Accounts/Doctors/DoctorSchedule.jsx");
+/* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
+__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
+
+var _templateObject,
+    _s = __webpack_require__.$Refresh$.signature();
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+
+
+
+
+
+
+
+var StyledDoctors = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\nmax-width: 100%;\n\n.aboutus-container{\n    max-width: 1230px;\n    margin: auto;\n    padding: 0 15px;\n}\n.title{\n    font-size: 40px;\n    color: #2f89fc;\n    text-transform: capitalize;\n    text-align: center;\n    margin-bottom: 20px;\n}\n.description{\n    text-align: center;\n    font-size: 20px;\n}\n\n"])));
+_c = StyledDoctors;
+
+var Doctors = function Doctors(props) {
+  _s();
+
+  var history = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_6__.useHistory)();
+  var urlParams = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_6__.useParams)();
+  var doctors = (0,react_redux__WEBPACK_IMPORTED_MODULE_2__.useSelector)(_store_selector_doctorSelector__WEBPACK_IMPORTED_MODULE_3__.doctorSelector);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(StyledDoctors, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "doctors-container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "doctors-title"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", {
+    className: "title"
+  }, "Book the appointment"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    className: "description"
+  }, "Choose a doctor")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+    className: "doctors-row"
+  }, doctors.map(function (doctorData, index) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+      key: index,
+      className: "doctors-li"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+      type: "button",
+      className: "button",
+      onClick: function onClick() {
+        history.push(_Routing_routing__WEBPACK_IMPORTED_MODULE_1__.PATHS.DOCTOR_SCHEDULE(urlParams.userId, doctorData.doctorID));
+      }
+    }, doctorData.doctorName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+      className: "doctors-position"
+    }, doctorData.doctorPosition));
+  }))));
+};
+
+_s(Doctors, "XJnckc4VJMs4C7GM3Q/ESWl1kL0=", false, function () {
+  return [react_router_dom__WEBPACK_IMPORTED_MODULE_6__.useHistory, react_router_dom__WEBPACK_IMPORTED_MODULE_6__.useParams, react_redux__WEBPACK_IMPORTED_MODULE_2__.useSelector];
+});
+
+_c2 = Doctors;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Doctors);
+
+var _c, _c2;
+
+__webpack_require__.$Refresh$.register(_c, "StyledDoctors");
+__webpack_require__.$Refresh$.register(_c2, "Doctors");
 
 const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
 const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
@@ -4674,180 +4870,6 @@ var _c, _c2;
 
 __webpack_require__.$Refresh$.register(_c, "StyledMyProfile");
 __webpack_require__.$Refresh$.register(_c2, "MyProfile");
-
-const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
-const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
-	$ReactRefreshModuleId$
-);
-
-function $ReactRefreshModuleRuntime$(exports) {
-	if (false) {}
-}
-
-if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Promise) {
-	$ReactRefreshCurrentExports$.then($ReactRefreshModuleRuntime$);
-} else {
-	$ReactRefreshModuleRuntime$($ReactRefreshCurrentExports$);
-}
-
-/***/ }),
-
-/***/ "./src/Components/Doctors/DoctorSchedule.jsx":
-/*!***************************************************!*\
-  !*** ./src/Components/Doctors/DoctorSchedule.jsx ***!
-  \***************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_datepicker__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-datepicker */ "./node_modules/react-datepicker/dist/react-datepicker.min.js");
-/* harmony import */ var react_datepicker__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_datepicker__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_datepicker_dist_react_datepicker_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-datepicker/dist/react-datepicker.css */ "./node_modules/react-datepicker/dist/react-datepicker.css");
-/* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
-__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
-
-var _s2 = __webpack_require__.$Refresh$.signature();
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-
-
-
-
-var DoctorSchedule = function DoctorSchedule(props) {
-  _s2();
-
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(),
-      _useState2 = _slicedToArray(_useState, 2),
-      startDate = _useState2[0],
-      setStartDate = _useState2[1];
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement((react_datepicker__WEBPACK_IMPORTED_MODULE_2___default()), {
-    className: "calendar",
-    selected: startDate,
-    onChange: function onChange(date) {
-      return setStartDate(date);
-    },
-    dateFormat: "MMMM d, yyyy h:mm aa"
-  });
-};
-
-_s2(DoctorSchedule, "NeEvXNq5VluTEoo3+jfTX8tYXN4=");
-
-_c = DoctorSchedule;
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DoctorSchedule);
-
-var _c;
-
-__webpack_require__.$Refresh$.register(_c, "DoctorSchedule");
-
-const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
-const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
-	$ReactRefreshModuleId$
-);
-
-function $ReactRefreshModuleRuntime$(exports) {
-	if (false) {}
-}
-
-if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Promise) {
-	$ReactRefreshCurrentExports$.then($ReactRefreshModuleRuntime$);
-} else {
-	$ReactRefreshModuleRuntime$($ReactRefreshCurrentExports$);
-}
-
-/***/ }),
-
-/***/ "./src/Components/Doctors/Doctors.jsx":
-/*!********************************************!*\
-  !*** ./src/Components/Doctors/Doctors.jsx ***!
-  \********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
-/* harmony import */ var Routing_routing__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Routing/routing */ "./src/Routing/routing.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var store_selector_doctorSelector__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! store/selector/doctorSelector */ "./src/store/selector/doctorSelector.js");
-/* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
-__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
-
-var _templateObject,
-    _s = __webpack_require__.$Refresh$.signature();
-
-function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-
-
-
-
-
-
-var StyledDoctors = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\nmax-width: 100%;\n\n.aboutus-container{\n    max-width: 1230px;\n    margin: auto;\n    padding: 0 15px;\n}\n.title{\n    font-size: 40px;\n    color: #2f89fc;\n    text-transform: capitalize;\n    text-align: center;\n    margin-bottom: 20px;\n}\n.description{\n    text-align: center;\n    font-size: 20px;\n}\n\n"])));
-_c = StyledDoctors;
-
-var Doctors = function Doctors(props) {
-  _s();
-
-  var history = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_5__.useHistory)();
-  var urlParams = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_5__.useParams)();
-  var doctors = (0,react_redux__WEBPACK_IMPORTED_MODULE_2__.useSelector)(store_selector_doctorSelector__WEBPACK_IMPORTED_MODULE_3__.doctorSelector);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(StyledDoctors, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "doctors-container"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "doctors-title"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", {
-    className: "title"
-  }, "Book the appointment"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-    className: "description"
-  }, "Choose a doctor")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
-    className: "doctors-row"
-  }, doctors.map(function (doctorData, index) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
-      key: index,
-      className: "doctors",
-      onClick: function onClick() {
-        history.push(Routing_routing__WEBPACK_IMPORTED_MODULE_1__.PATHS.DOCTOR_SCHEDULE(urlParams.userId, doctorData.doctorID));
-      }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h4", {
-      className: "doctors-name"
-    }, doctorData.doctorName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-      className: "doctors-position"
-    }, doctorData.doctorPosition));
-  }))));
-};
-
-_s(Doctors, "XJnckc4VJMs4C7GM3Q/ESWl1kL0=", false, function () {
-  return [react_router_dom__WEBPACK_IMPORTED_MODULE_5__.useHistory, react_router_dom__WEBPACK_IMPORTED_MODULE_5__.useParams, react_redux__WEBPACK_IMPORTED_MODULE_2__.useSelector];
-});
-
-_c2 = Doctors;
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Doctors);
-
-var _c, _c2;
-
-__webpack_require__.$Refresh$.register(_c, "StyledDoctors");
-__webpack_require__.$Refresh$.register(_c2, "Doctors");
 
 const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
 const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
@@ -5989,7 +6011,7 @@ var Header = function Header(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
     className: "header-menu_link",
     onClick: function onClick() {
-      moveToProfile(user.id);
+      moveToProfile(user.userId);
     }
   }, "Account")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
     className: "header-menu_item"
@@ -6109,8 +6131,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var Components_Accounts_MyProfile__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Components/Accounts/MyProfile */ "./src/Components/Accounts/MyProfile.jsx");
 /* harmony import */ var Components_Accounts_Appointment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Components/Accounts/Appointment */ "./src/Components/Accounts/Appointment.jsx");
 /* harmony import */ var _routing__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./routing */ "./src/Routing/routing.js");
-/* harmony import */ var Components_Doctors_Doctors__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! Components/Doctors/Doctors */ "./src/Components/Doctors/Doctors.jsx");
-/* harmony import */ var _Components_Doctors_DoctorSchedule__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Components/Doctors/DoctorSchedule */ "./src/Components/Doctors/DoctorSchedule.jsx");
+/* harmony import */ var _Components_Accounts_Doctors_Doctors__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Components/Accounts/Doctors/Doctors */ "./src/Components/Accounts/Doctors/Doctors.jsx");
+/* harmony import */ var _Components_Accounts_Doctors_DoctorSchedule__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Components/Accounts/Doctors/DoctorSchedule */ "./src/Components/Accounts/Doctors/DoctorSchedule.jsx");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
 
@@ -6130,9 +6152,9 @@ var AccountRouter = function AccountRouter(props) {
     path: _routing__WEBPACK_IMPORTED_MODULE_4__.ROUTE.APPOINTMENT
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Components_Accounts_Appointment__WEBPACK_IMPORTED_MODULE_3__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Route, {
     path: _routing__WEBPACK_IMPORTED_MODULE_4__.ROUTE.DOCTOR
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Components_Doctors_Doctors__WEBPACK_IMPORTED_MODULE_5__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Route, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Components_Accounts_Doctors_Doctors__WEBPACK_IMPORTED_MODULE_5__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Route, {
     path: _routing__WEBPACK_IMPORTED_MODULE_4__.ROUTE.DOCTOR_SCHEDULE
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Components_Doctors_DoctorSchedule__WEBPACK_IMPORTED_MODULE_6__["default"], null)));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Components_Accounts_Doctors_DoctorSchedule__WEBPACK_IMPORTED_MODULE_6__["default"], null)));
 };
 
 _c = AccountRouter;
@@ -6252,7 +6274,7 @@ var ROUTE = {
   PROFILE: "/account/:userId/profile",
   APPOINTMENT: "/account/:userId/appointment",
   DOCTOR: "/account/:userId/doctor",
-  DOCTOR_SCHEDULE: '/account/:userId/doctor/:doctorID'
+  DOCTOR_SCHEDULE: "/account/:userId/doctor/:doctorID"
 };
 var PATHS = {
   ACCOUNT: function ACCOUNT(id) {
@@ -70267,4 +70289,4 @@ function toString(value) {
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.13eceee0b5132ee8bcc4.js.map
+//# sourceMappingURL=main.ff0f53cd63a52d550c89.js.map
