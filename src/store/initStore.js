@@ -5,16 +5,19 @@ import storage from 'redux-persist/lib/storage';
 import hardSet from 'redux-persist/lib/stateReconciler/hardSet';
 import rootReducer from './reducer/rootReducer';
 
+
+
 const newUser = [];
 const doctorList = [
   {doctorID: 9876, doctorName: "Jon Tern", doctorPosition: "dentist"}, 
   {doctorID: 9877, doctorName: "Mary Smith", doctorPosition: "dentist"},
   {doctorID: 9878, doctorName: "Alex Smirnov", doctorPosition: "dentist"},
   {doctorID: 9879, doctorName: "Anna Braun", doctorPosition: "dentist"}
-]
+];
+
 const initialState = {
   userReducer: {user: newUser},
-  doctorReducer: {doctor: doctorList}
+  doctorReducer: {doctor: doctorList},
 }
 
 

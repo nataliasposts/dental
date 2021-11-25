@@ -67,7 +67,7 @@ const ModalWindowLogin = (props)=>{
     
                     } else if (data.email === formData.email && data.password === formData.password) {
                         dispatch(logInUser(data.Birthday, data.FirstName, data.SecondName, data.password, data.email, data.userId, data.loggedIn))
-                        history.push(PATHS.APPOINTMENT(data.userId))
+                        history.push(PATHS.PROFILE(data.userId))
                         setModalContent(false);
                     }
                 })

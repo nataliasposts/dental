@@ -2,14 +2,19 @@ import React, { useEffect, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import setHours from "date-fns/setHours";
 import setMinutes from "date-fns/setMinutes";
-
+import { useDispatch } from "react-redux";
+import { Link, useParams, useHistory } from "react-router-dom";
+import { PATHS } from '../../Routing/routing';
 
 
 import "react-datepicker/dist/react-datepicker.css";
 
 
 const DoctorSchedule = (props)=>{
-    const [startDate, setStartDate] = useState();
+  const [startDate, setStartDate] = useState();
+    const history = useHistory();
+    const params = useParams();
+    const dispatch = useDispatch();
 
   
 
@@ -26,7 +31,14 @@ const DoctorSchedule = (props)=>{
              placeholderText="Select the date and time"
             />
         </div>
-          <button className={"book-appointment"}>book appointment</button>
+          <button className={"book-appointment"}
+           onClick={() => {
+            dispatch({type: "newAppointment", payload: 
+            {startDate, user: params.userId, doctor: params.doctorID }});
+            history.push(PATHS.APPOINTMENT(params.userId))
+           }}>
+            book appointment
+          </button>
         </div>
       );
     };

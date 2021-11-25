@@ -14,7 +14,7 @@ import background from "assets/img/contact/contact.png";
 const StyledContact = styled.div`
 max-width: 100%;
 padding: 155px 0 137px 0;
-background: url(${background}) rgba(0, 0, 0, 0.1);;
+background: url(${background}) rgba(0, 0, 0, 0.1);
 background-repeat: no-repeat;
 background-size: cover;
 background-blend-mode: multiply;
