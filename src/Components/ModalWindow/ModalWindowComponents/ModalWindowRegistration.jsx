@@ -62,7 +62,7 @@ const ModalWindowRegistration = (props)=>{
                 registeredUser(formData.Birthday, formData.FirstName, formData.SecondName, formData.password, formData.email)
                 .then(({ dataId, dataLogged }) => {
                     dispatch(newUserAdd(formData.Birthday, formData.FirstName, formData.SecondName, formData.password, formData.email, dataId, dataLogged));
-                    history.push(PATHS.APPOINTMENT(dataId));
+                    history.push(PATHS.PROFILE(dataId));
                     setModalContent(false);
         })
             }}

@@ -7,6 +7,7 @@ import { Link, useParams, useHistory } from "react-router-dom";
 import { PATHS } from '../../Routing/routing';
 
 
+
 import "react-datepicker/dist/react-datepicker.css";
 
 
@@ -34,7 +35,8 @@ const DoctorSchedule = (props)=>{
           <button className={"book-appointment"}
            onClick={() => {
             dispatch({type: "newAppointment", payload: 
-            {startDate, user: params.userId, doctor: params.doctorID }});
+            {startDate, user: params.userId, doctor: params.doctorID}});
+            console.log(startDate)
             history.push(PATHS.APPOINTMENT(params.userId))
            }}>
             book appointment

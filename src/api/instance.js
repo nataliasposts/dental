@@ -20,3 +20,5 @@ export const loginUser = (email) => {
         res(userData);
     })
 };
+
+

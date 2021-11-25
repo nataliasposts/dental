@@ -4,7 +4,7 @@ import {useHistory, useParams} from "react-router-dom";
 import { PATHS } from "../../Routing/routing";
 import {useSelector} from "react-redux";
 import { doctorSelector } from "../../store/selector/doctorSelector";
-import DoctorSchedule from "./DoctorSchedule";
+
 
 
 const StyledDoctors = styled.div`
@@ -33,7 +33,7 @@ const Doctors = (props) => {
     const history = useHistory();
     const urlParams = useParams();
     const doctors = useSelector(doctorSelector);
-
+    
   
     
     return(

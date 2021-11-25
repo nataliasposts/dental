@@ -4531,6 +4531,87 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _store_selector_appointmentSelector__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../store/selector/appointmentSelector */ "./src/store/selector/appointmentSelector.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _Card__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Card */ "./src/Components/Accounts/Card.jsx");
+/* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
+__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
+
+var _templateObject,
+    _s = __webpack_require__.$Refresh$.signature();
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+
+
+
+
+
+var StyledAppointment = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral([""])));
+_c = StyledAppointment;
+
+var Appointment = function Appointment(props) {
+  _s();
+
+  var appointFind = (0,react_redux__WEBPACK_IMPORTED_MODULE_2__.useSelector)(_store_selector_appointmentSelector__WEBPACK_IMPORTED_MODULE_1__.appointmentSelector);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(StyledAppointment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "appointment-row"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "appointment-title"
+  }, appointFind.map(function (book, index) {
+    var d = new Date(book.startDate);
+    var date = d.toLocaleString('en-US');
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      key: index
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Card__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      startDate: date,
+      doctorName: book.doctorName
+    }));
+  }))));
+};
+
+_s(Appointment, "bv+8zf9CRvyQGxaQgHMct5vgGoA=", false, function () {
+  return [react_redux__WEBPACK_IMPORTED_MODULE_2__.useSelector];
+});
+
+_c2 = Appointment;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Appointment);
+
+var _c, _c2;
+
+__webpack_require__.$Refresh$.register(_c, "StyledAppointment");
+__webpack_require__.$Refresh$.register(_c2, "Appointment");
+
+const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
+const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
+	$ReactRefreshModuleId$
+);
+
+function $ReactRefreshModuleRuntime$(exports) {
+	if (false) {}
+}
+
+if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Promise) {
+	$ReactRefreshCurrentExports$.then($ReactRefreshModuleRuntime$);
+} else {
+	$ReactRefreshModuleRuntime$($ReactRefreshCurrentExports$);
+}
+
+/***/ }),
+
+/***/ "./src/Components/Accounts/Card.jsx":
+/*!******************************************!*\
+  !*** ./src/Components/Accounts/Card.jsx ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
@@ -4541,26 +4622,27 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
-var StyledAppointment = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral([""])));
-_c = StyledAppointment;
+var StyledCard = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral([" "])));
+_c = StyledCard;
 
-var Appointment = function Appointment(props) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(StyledAppointment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "appointment-row"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "appointment-title"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-    className: "user-appointment"
-  }))));
+var Card = function Card(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(StyledCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "card-list"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", {
+    className: "card-title"
+  }, props.startDate), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    className: "card-description"
+  })));
 };
 
-_c2 = Appointment;
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Appointment);
+_c2 = Card;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_c3 = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.memo)(Card));
 
-var _c, _c2;
+var _c, _c2, _c3;
 
-__webpack_require__.$Refresh$.register(_c, "StyledAppointment");
-__webpack_require__.$Refresh$.register(_c2, "Appointment");
+__webpack_require__.$Refresh$.register(_c, "StyledCard");
+__webpack_require__.$Refresh$.register(_c2, "Card");
+__webpack_require__.$Refresh$.register(_c3, "%default%");
 
 const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
 const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
@@ -4661,6 +4743,7 @@ var DoctorSchedule = function DoctorSchedule(props) {
           doctor: params.doctorID
         }
       });
+      console.log(startDate);
       history.push(_Routing_routing__WEBPACK_IMPORTED_MODULE_2__.PATHS.APPOINTMENT(params.userId));
     }
   }, "book appointment"));
@@ -4706,12 +4789,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var _Routing_routing__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../Routing/routing */ "./src/Routing/routing.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _store_selector_doctorSelector__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../store/selector/doctorSelector */ "./src/store/selector/doctorSelector.js");
-/* harmony import */ var _DoctorSchedule__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./DoctorSchedule */ "./src/Components/Accounts/DoctorSchedule.jsx");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
 
@@ -4726,15 +4808,14 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
-
-var StyledDoctors = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\nmax-width: 100%;\n\n.aboutus-container{\n    max-width: 1230px;\n    margin: auto;\n    padding: 0 15px;\n}\n.title{\n    font-size: 40px;\n    color: #2f89fc;\n    text-transform: capitalize;\n    text-align: center;\n    margin-bottom: 20px;\n}\n.description{\n    text-align: center;\n    font-size: 20px;\n}\n\n"])));
+var StyledDoctors = styled_components__WEBPACK_IMPORTED_MODULE_4__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral(["\nmax-width: 100%;\n\n.aboutus-container{\n    max-width: 1230px;\n    margin: auto;\n    padding: 0 15px;\n}\n.title{\n    font-size: 40px;\n    color: #2f89fc;\n    text-transform: capitalize;\n    text-align: center;\n    margin-bottom: 20px;\n}\n.description{\n    text-align: center;\n    font-size: 20px;\n}\n\n"])));
 _c = StyledDoctors;
 
 var Doctors = function Doctors(props) {
   _s();
 
-  var history = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_6__.useHistory)();
-  var urlParams = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_6__.useParams)();
+  var history = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_5__.useHistory)();
+  var urlParams = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_5__.useParams)();
   var doctors = (0,react_redux__WEBPACK_IMPORTED_MODULE_2__.useSelector)(_store_selector_doctorSelector__WEBPACK_IMPORTED_MODULE_3__.doctorSelector);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(StyledDoctors, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "doctors-container"
@@ -4763,7 +4844,7 @@ var Doctors = function Doctors(props) {
 };
 
 _s(Doctors, "XJnckc4VJMs4C7GM3Q/ESWl1kL0=", false, function () {
-  return [react_router_dom__WEBPACK_IMPORTED_MODULE_6__.useHistory, react_router_dom__WEBPACK_IMPORTED_MODULE_6__.useParams, react_redux__WEBPACK_IMPORTED_MODULE_2__.useSelector];
+  return [react_router_dom__WEBPACK_IMPORTED_MODULE_5__.useHistory, react_router_dom__WEBPACK_IMPORTED_MODULE_5__.useParams, react_redux__WEBPACK_IMPORTED_MODULE_2__.useSelector];
 });
 
 _c2 = Doctors;
@@ -5612,7 +5693,7 @@ var ModalWindowRegistration = function ModalWindowRegistration(props) {
         var dataId = _ref.dataId,
             dataLogged = _ref.dataLogged;
         dispatch((0,store_action_newUserAdd__WEBPACK_IMPORTED_MODULE_6__.newUserAdd)(formData.Birthday, formData.FirstName, formData.SecondName, formData.password, formData.email, dataId, dataLogged));
-        history.push(Routing_routing__WEBPACK_IMPORTED_MODULE_4__.PATHS.APPOINTMENT(dataId));
+        history.push(Routing_routing__WEBPACK_IMPORTED_MODULE_4__.PATHS.PROFILE(dataId));
         setModalContent(false);
       });
     },
@@ -7359,10 +7440,10 @@ var appointmentReducer = function appointmentReducer() {
 
   switch (action.type) {
     case 'newAppointment':
-      var newAppointment = _toConsumableArray(state);
+      var newAppointmentList = _toConsumableArray(state);
 
-      newAppointment.push(action.payload);
-      return newAppointment;
+      newAppointmentList.push(action.payload);
+      return newAppointmentList;
 
     default:
       return _toConsumableArray(state);
@@ -7552,6 +7633,41 @@ var userReducer = function userReducer(state, action) {
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (userReducer);
+
+const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
+const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
+	$ReactRefreshModuleId$
+);
+
+function $ReactRefreshModuleRuntime$(exports) {
+	if (false) {}
+}
+
+if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Promise) {
+	$ReactRefreshCurrentExports$.then($ReactRefreshModuleRuntime$);
+} else {
+	$ReactRefreshModuleRuntime$($ReactRefreshCurrentExports$);
+}
+
+/***/ }),
+
+/***/ "./src/store/selector/appointmentSelector.js":
+/*!***************************************************!*\
+  !*** ./src/store/selector/appointmentSelector.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "appointmentSelector": () => (/* binding */ appointmentSelector)
+/* harmony export */ });
+/* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
+__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
+
+var appointmentSelector = function appointmentSelector(store) {
+  return store.appointmentReducer;
+};
 
 const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
 const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
@@ -70374,4 +70490,4 @@ function toString(value) {
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.f83f961bb640bcc1a9d2.js.map
+//# sourceMappingURL=main.85bd9b23af65d4533aad.js.map
