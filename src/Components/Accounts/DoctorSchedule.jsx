@@ -16,6 +16,7 @@ const DoctorSchedule = (props)=>{
     const history = useHistory();
     const params = useParams();
     const dispatch = useDispatch();
+    
 
   
 
@@ -36,7 +37,7 @@ const DoctorSchedule = (props)=>{
            onClick={() => {
             dispatch({type: "newAppointment", payload: 
             {startDate, user: params.userId, doctor: params.doctorID}});
-            console.log(startDate)
+            console.log(startDate, params.doctorID, params.userId )
             history.push(PATHS.APPOINTMENT(params.userId))
            }}>
             book appointment

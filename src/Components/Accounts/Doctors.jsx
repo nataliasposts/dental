@@ -33,7 +33,7 @@ const Doctors = (props) => {
     const history = useHistory();
     const urlParams = useParams();
     const doctors = useSelector(doctorSelector);
-    
+
   
     
     return(
@@ -51,6 +51,7 @@ const Doctors = (props) => {
                               <button type={"button"} className={"button"}
                                   onClick={() => {
                                   history.push(PATHS.DOCTOR_SCHEDULE(urlParams.userId, doctorData.doctorID))}}>
+                                      
                                 {doctorData.doctorName}                            
                             </button>
                               <p className={"doctors-position"}>{doctorData.doctorPosition}</p>

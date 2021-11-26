@@ -4565,8 +4565,7 @@ var Appointment = function Appointment(props) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       key: index
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Card__WEBPACK_IMPORTED_MODULE_3__["default"], {
-      startDate: date,
-      doctorName: book.doctorName
+      date: date
     }));
   }))));
 };
@@ -4630,7 +4629,7 @@ var Card = function Card(props) {
     className: "card-list"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", {
     className: "card-title"
-  }, props.startDate), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+  }, props.date), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
     className: "card-description"
   })));
 };
@@ -4743,7 +4742,7 @@ var DoctorSchedule = function DoctorSchedule(props) {
           doctor: params.doctorID
         }
       });
-      console.log(startDate);
+      console.log(startDate, params.doctorID, params.userId);
       history.push(_Routing_routing__WEBPACK_IMPORTED_MODULE_2__.PATHS.APPOINTMENT(params.userId));
     }
   }, "book appointment"));
@@ -70490,4 +70489,4 @@ function toString(value) {
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.85bd9b23af65d4533aad.js.map
+//# sourceMappingURL=main.df01c9ab9cc773611993.js.map

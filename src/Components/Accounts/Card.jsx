@@ -10,7 +10,7 @@ const Card = (props) => {
         <StyledCard>
             <div className={"card-list"}>
                 <h3 className={"card-title"}>
-                    {props.startDate}
+                    {props.date}
                 </h3>
                 <p className={"card-description"}>
                  

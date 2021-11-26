@@ -21,7 +21,7 @@ const Appointment = (props) => {
                         const date = d.toLocaleString('en-US');
                         return(
                             <div key={index}>
-                    <Card  startDate={date} doctorName={book.doctorName} />
+                    <Card  date={date}/>
                     </div>
                     )
                 })}
