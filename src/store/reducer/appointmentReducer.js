@@ -1,3 +1,6 @@
+
+
+
 const initialState = []
 const appointmentReducer = (state = initialState, action)=> {
     switch(action.type){
@@ -5,7 +8,11 @@ const appointmentReducer = (state = initialState, action)=> {
             let newAppointmentList = [...state];
             newAppointmentList.push(action.payload);
             return newAppointmentList;
-         default: return [...state]
+            
+
+
+              default: return [...state]
+      
     }
 }
 

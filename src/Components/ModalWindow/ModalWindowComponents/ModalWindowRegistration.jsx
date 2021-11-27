@@ -49,8 +49,7 @@ const ModalWindowRegistration = (props)=>{
     const history = useHistory();
     const setModalContent = useContext(ModalContext);
 
-
-
+    
     return(
         <StyledModalWindowRegistration>
             <div className={"registration-title"}>

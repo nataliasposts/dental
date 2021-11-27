@@ -50,8 +50,7 @@ const Doctors = (props) => {
                           <li key={index} className={"doctors-li"}>
                               <button type={"button"} className={"button"}
                                   onClick={() => {
-                                  history.push(PATHS.DOCTOR_SCHEDULE(urlParams.userId, doctorData.doctorID))}}>
-                                      
+                                  history.push(PATHS.DOCTOR_SCHEDULE(urlParams.userId, doctorData.doctorID))}}>   
                                 {doctorData.doctorName}                            
                             </button>
                               <p className={"doctors-position"}>{doctorData.doctorPosition}</p>

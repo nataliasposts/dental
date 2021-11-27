@@ -11,6 +11,7 @@ const StyledAppointment = styled.div``
 
 const Appointment = (props) => {
     const appointFind = useSelector(appointmentSelector);
+    
 
     return(
         <StyledAppointment>
@@ -21,7 +22,7 @@ const Appointment = (props) => {
                         const date = d.toLocaleString('en-US');
                         return(
                             <div key={index}>
-                    <Card  date={date}/>
+                    <Card  date={date} doctorName={book.doctorName} id={book.id}/>
                     </div>
                     )
                 })}

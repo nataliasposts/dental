@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from "react";
 import DatePicker from 'react-datepicker';
 import setHours from "date-fns/setHours";
 import setMinutes from "date-fns/setMinutes";
 import { useDispatch } from "react-redux";
 import { Link, useParams, useHistory } from "react-router-dom";
 import { PATHS } from '../../Routing/routing';
+import { doctorSelector } from '../../store/selector/doctorSelector';
+import { useSelector } from "react-redux";
 
 
 
@@ -16,6 +18,8 @@ const DoctorSchedule = (props)=>{
     const history = useHistory();
     const params = useParams();
     const dispatch = useDispatch();
+    const doctors = useSelector(doctorSelector);
+    const currentDoctor = doctors.find(doctor => doctor.doctorID == params.doctorID);
     
 
   
@@ -36,8 +40,8 @@ const DoctorSchedule = (props)=>{
           <button className={"book-appointment"}
            onClick={() => {
             dispatch({type: "newAppointment", payload: 
-            {startDate, user: params.userId, doctor: params.doctorID}});
-            console.log(startDate, params.doctorID, params.userId )
+            {startDate, user: params.userId, doctor: params.doctorID, doctorName: currentDoctor.doctorName}});
+            console.log(startDate, params.doctorID, params.userId, currentDoctor.doctorName)
             history.push(PATHS.APPOINTMENT(params.userId))
            }}>
             book appointment

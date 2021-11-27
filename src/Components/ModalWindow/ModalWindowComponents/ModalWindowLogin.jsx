@@ -54,25 +54,22 @@ const ModalWindowLogin = (props)=>{
    
    
 
+    const LogedUser = (formData) => {
+        loginUser(formData.email)
+            .then((data) => {
+                if (!data) {
+                    alert('Invalid login');
+                } else if (data.email === formData.email && data.password !== formData.password) {
+                    alert('Invalid password');
 
+                } else if (data.email === formData.email && data.password === formData.password) {
+                    dispatch(logInUser(data.Birthday, data.FirstName, data.SecondName, data.password, data.email, data.userId, data.loggedIn))
+                    history.push(PATHS.PROFILE(data.userId))
+                    setModalContent(false);
+                }
+            })
 
-
-        const LogedUser = (formData) => {
-            loginUser(formData.email)
-                .then((data) => {
-                    if (!data) {
-                        alert('Invalid login');
-                    } else if (data.email === formData.email && data.password !== formData.password) {
-                        alert('Invalid password');
-    
-                    } else if (data.email === formData.email && data.password === formData.password) {
-                        dispatch(logInUser(data.Birthday, data.FirstName, data.SecondName, data.password, data.email, data.userId, data.loggedIn))
-                        history.push(PATHS.PROFILE(data.userId))
-                        setModalContent(false);
-                    }
-                })
-    
-        }
+    }
 
 
 

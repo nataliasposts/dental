@@ -7,6 +7,8 @@ import { PATHS } from "Routing/routing";
 
 
 
+
+
 const StyledAccount = styled.div`
 .account-container{
     max-width: 1170px;
@@ -57,11 +59,9 @@ const Account = (props) =>{
     const history = useHistory();
     const urlParams = useParams();
     const dispatch = useDispatch();
+    
 
-    const logOut = () => {
-        dispatch(logOutUser());
-        history.push("/main");
-    }
+
 
     return(
         <StyledAccount>
@@ -93,7 +93,11 @@ const Account = (props) =>{
                             </Link>                             
                             </li>
                             <li className={"account-list_item"}>
-                                <button onClick={logOut} className={"account-btn"}>
+                                <button onClick={() => {
+                                    dispatch(logOutUser());
+                                    history.push("/main");
+                                }}
+                                className={"account-btn"}>
                                     Log out
                                 </button>
                             </li>

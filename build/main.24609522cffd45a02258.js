@@ -4565,7 +4565,9 @@ var Appointment = function Appointment(props) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       key: index
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Card__WEBPACK_IMPORTED_MODULE_3__["default"], {
-      date: date
+      date: date,
+      doctorName: book.doctorName,
+      id: book.id
     }));
   }))));
 };
@@ -4631,7 +4633,9 @@ var Card = function Card(props) {
     className: "card-title"
   }, props.date), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
     className: "card-description"
-  })));
+  }, props.doctorName, props.id), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    className: "remove-card"
+  }, "remove")));
 };
 
 _c2 = Card;
@@ -4672,14 +4676,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_datepicker__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-datepicker */ "./node_modules/react-datepicker/dist/react-datepicker.min.js");
-/* harmony import */ var react_datepicker__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_datepicker__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var date_fns_setHours__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! date-fns/setHours */ "./node_modules/date-fns/esm/setHours/index.js");
-/* harmony import */ var date_fns_setMinutes__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! date-fns/setMinutes */ "./node_modules/date-fns/esm/setMinutes/index.js");
+/* harmony import */ var react_datepicker__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-datepicker */ "./node_modules/react-datepicker/dist/react-datepicker.min.js");
+/* harmony import */ var react_datepicker__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_datepicker__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var date_fns_setHours__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! date-fns/setHours */ "./node_modules/date-fns/esm/setHours/index.js");
+/* harmony import */ var date_fns_setMinutes__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! date-fns/setMinutes */ "./node_modules/date-fns/esm/setMinutes/index.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var _Routing_routing__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Routing/routing */ "./src/Routing/routing.js");
-/* harmony import */ var react_datepicker_dist_react_datepicker_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-datepicker/dist/react-datepicker.css */ "./node_modules/react-datepicker/dist/react-datepicker.css");
+/* harmony import */ var _store_selector_doctorSelector__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../store/selector/doctorSelector */ "./src/store/selector/doctorSelector.js");
+/* harmony import */ var react_datepicker_dist_react_datepicker_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-datepicker/dist/react-datepicker.css */ "./node_modules/react-datepicker/dist/react-datepicker.css");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
 
@@ -4706,6 +4711,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
+
 var DoctorSchedule = function DoctorSchedule(props) {
   _s2();
 
@@ -4714,21 +4721,25 @@ var DoctorSchedule = function DoctorSchedule(props) {
       startDate = _useState2[0],
       setStartDate = _useState2[1];
 
-  var history = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_4__.useHistory)();
-  var params = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_4__.useParams)();
+  var history = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_5__.useHistory)();
+  var params = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_5__.useParams)();
   var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch)();
+  var doctors = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)(_store_selector_doctorSelector__WEBPACK_IMPORTED_MODULE_3__.doctorSelector);
+  var currentDoctor = doctors.find(function (doctor) {
+    return doctor.doctorID == params.doctorID;
+  });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "schedule-row"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "schedule"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement((react_datepicker__WEBPACK_IMPORTED_MODULE_5___default()), {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement((react_datepicker__WEBPACK_IMPORTED_MODULE_6___default()), {
     selected: startDate,
     onChange: function onChange(date) {
       return setStartDate(date);
     },
     showTimeSelect: true,
-    minTime: (0,date_fns_setHours__WEBPACK_IMPORTED_MODULE_6__["default"])((0,date_fns_setMinutes__WEBPACK_IMPORTED_MODULE_7__["default"])(new Date(), 30), 8),
-    maxTime: (0,date_fns_setHours__WEBPACK_IMPORTED_MODULE_6__["default"])((0,date_fns_setMinutes__WEBPACK_IMPORTED_MODULE_7__["default"])(new Date(), 0), 20),
+    minTime: (0,date_fns_setHours__WEBPACK_IMPORTED_MODULE_7__["default"])((0,date_fns_setMinutes__WEBPACK_IMPORTED_MODULE_8__["default"])(new Date(), 30), 8),
+    maxTime: (0,date_fns_setHours__WEBPACK_IMPORTED_MODULE_7__["default"])((0,date_fns_setMinutes__WEBPACK_IMPORTED_MODULE_8__["default"])(new Date(), 0), 20),
     dateFormat: "MMMM d, yyyy h:mm aa",
     placeholderText: "Select the date and time"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
@@ -4739,17 +4750,18 @@ var DoctorSchedule = function DoctorSchedule(props) {
         payload: {
           startDate: startDate,
           user: params.userId,
-          doctor: params.doctorID
+          doctor: params.doctorID,
+          doctorName: currentDoctor.doctorName
         }
       });
-      console.log(startDate, params.doctorID, params.userId);
+      console.log(startDate, params.doctorID, params.userId, currentDoctor.doctorName);
       history.push(_Routing_routing__WEBPACK_IMPORTED_MODULE_2__.PATHS.APPOINTMENT(params.userId));
     }
   }, "book appointment"));
 };
 
-_s2(DoctorSchedule, "WumD1aSPseBFTZWm6MmMKsbHqkk=", false, function () {
-  return [react_router_dom__WEBPACK_IMPORTED_MODULE_4__.useHistory, react_router_dom__WEBPACK_IMPORTED_MODULE_4__.useParams, react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch];
+_s2(DoctorSchedule, "QoY9lk/jWciLcVLFHtJsZ0+Qvpw=", false, function () {
+  return [react_router_dom__WEBPACK_IMPORTED_MODULE_5__.useHistory, react_router_dom__WEBPACK_IMPORTED_MODULE_5__.useParams, react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch, react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector];
 });
 
 _c = DoctorSchedule;
@@ -6063,11 +6075,6 @@ var Header = function Header(props) {
     history.push(_Routing_routing__WEBPACK_IMPORTED_MODULE_2__.PATHS.PROFILE(userId));
   };
 
-  var logOut = function logOut() {
-    dispatch((0,_store_action_logOutUser__WEBPACK_IMPORTED_MODULE_6__.logOutUser)());
-    history.push("/main");
-  };
-
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(StyledHeader, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "header-container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -6122,7 +6129,10 @@ var Header = function Header(props) {
     className: "header-login"
   }, user.loggedIn === true ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
     className: "log-btn",
-    onClick: logOut
+    onClick: function onClick() {
+      dispatch((0,_store_action_logOutUser__WEBPACK_IMPORTED_MODULE_6__.logOutUser)());
+      history.push("/main");
+    }
   }, "Logout") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
     className: "log-btn",
     onClick: function onClick() {
@@ -6528,12 +6538,6 @@ var Account = function Account(props) {
   var history = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_5__.useHistory)();
   var urlParams = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_5__.useParams)();
   var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useDispatch)();
-
-  var logOut = function logOut() {
-    dispatch((0,store_action_logOutUser__WEBPACK_IMPORTED_MODULE_2__.logOutUser)());
-    history.push("/main");
-  };
-
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(StyledAccount, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "account-container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -6566,7 +6570,10 @@ var Account = function Account(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Doctors")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
     className: "account-list_item"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-    onClick: logOut,
+    onClick: function onClick() {
+      dispatch((0,store_action_logOutUser__WEBPACK_IMPORTED_MODULE_2__.logOutUser)());
+      history.push("/main");
+    },
     className: "account-btn"
   }, "Log out"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
     className: "section"
@@ -7530,10 +7537,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
 /* harmony import */ var _userReducer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./userReducer */ "./src/store/reducer/userReducer.js");
 /* harmony import */ var _doctorReducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./doctorReducer */ "./src/store/reducer/doctorReducer.js");
 /* harmony import */ var _appointmentReducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./appointmentReducer */ "./src/store/reducer/appointmentReducer.js");
+/* harmony import */ var _actionType__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../actionType */ "./src/store/actionType.js");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
 
@@ -7541,11 +7549,21 @@ __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/r
 
 
 
-var rootReducer = (0,redux__WEBPACK_IMPORTED_MODULE_3__.combineReducers)({
+
+var appReducer = (0,redux__WEBPACK_IMPORTED_MODULE_4__.combineReducers)({
   userReducer: _userReducer__WEBPACK_IMPORTED_MODULE_0__["default"],
   doctorReducer: _doctorReducer__WEBPACK_IMPORTED_MODULE_1__["default"],
   appointmentReducer: _appointmentReducer__WEBPACK_IMPORTED_MODULE_2__["default"]
 });
+
+var rootReducer = function rootReducer(state, action) {
+  if (action.type === _actionType__WEBPACK_IMPORTED_MODULE_3__.USER_ACTIONS.logOut) {
+    return appReducer(undefined, action);
+  }
+
+  return appReducer(state, action);
+};
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (rootReducer);
 
 const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
@@ -70489,4 +70507,4 @@ function toString(value) {
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.df01c9ab9cc773611993.js.map
+//# sourceMappingURL=main.24609522cffd45a02258.js.map

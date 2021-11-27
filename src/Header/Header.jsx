@@ -86,10 +86,7 @@ const Header = (props) => {
     const moveToProfile = (userId) => {
         history.push(PATHS.PROFILE(userId))
       }
-      const logOut = () => {
-        dispatch(logOutUser());
-        history.push("/main");
-    }
+
    
     return(
         <StyledHeader>
@@ -131,8 +128,13 @@ const Header = (props) => {
                             </nav>
                             <div className={"header-login"}>
                                 {(user.loggedIn === true)
-                                ? <button className={"log-btn"} onClick={logOut}>
-                                         Logout
+                                ? <button className={"log-btn"} 
+
+                                onClick={() => {
+                                        dispatch(logOutUser());
+                                        history.push("/main");
+                                        }}>
+                                            Logout
                                 </button>
                                 : <button className={"log-btn"}
                                    onClick={() => {setModalContent(<ModalWindowLogin/>)}} >
