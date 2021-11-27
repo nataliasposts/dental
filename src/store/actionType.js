@@ -6,3 +6,6 @@ export const USER_ACTIONS = {
 };
 
 
+export const APPOINTMENT_ACTIONS ={
+    removeAppointment: "remove the appointment"
+}

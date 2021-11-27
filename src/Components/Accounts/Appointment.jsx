@@ -1,4 +1,4 @@
-import React, { useCallback, useContext, useEffect, useState } from "react";
+import React, { memo } from "react";
 import styled from "styled-components";
 import { appointmentSelector } from "../../store/selector/appointmentSelector";
 import { useSelector } from "react-redux";
@@ -17,12 +17,12 @@ const Appointment = (props) => {
         <StyledAppointment>
              <div className={"appointment-row"}>
                 <div className={"appointment-title"}>
-                    {appointFind.map((book, index)=>{
+                    {appointFind.map((book, id)=>{
                         const d = new Date(book.startDate);
                         const date = d.toLocaleString('en-US');
                         return(
-                            <div key={index}>
-                    <Card  date={date} doctorName={book.doctorName} id={book.id}/>
+                            <div key={id}>
+                    <Card  date={date} doctorName={book.doctorName} id={date.id}/>
                     </div>
                     )
                 })}
@@ -32,4 +32,4 @@ const Appointment = (props) => {
     )
 }
 
-export default Appointment;
+export default memo(Appointment);

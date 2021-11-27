@@ -4559,15 +4559,15 @@ var Appointment = function Appointment(props) {
     className: "appointment-row"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "appointment-title"
-  }, appointFind.map(function (book, index) {
+  }, appointFind.map(function (book, id) {
     var d = new Date(book.startDate);
     var date = d.toLocaleString('en-US');
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      key: index
+      key: id
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Card__WEBPACK_IMPORTED_MODULE_3__["default"], {
       date: date,
       doctorName: book.doctorName,
-      id: book.id
+      id: date.id
     }));
   }))));
 };
@@ -4577,12 +4577,13 @@ _s(Appointment, "bv+8zf9CRvyQGxaQgHMct5vgGoA=", false, function () {
 });
 
 _c2 = Appointment;
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Appointment);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_c3 = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.memo)(Appointment));
 
-var _c, _c2;
+var _c, _c2, _c3;
 
 __webpack_require__.$Refresh$.register(_c, "StyledAppointment");
 __webpack_require__.$Refresh$.register(_c2, "Appointment");
+__webpack_require__.$Refresh$.register(_c3, "%default%");
 
 const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
 const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
@@ -4613,30 +4614,45 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+/* harmony import */ var _store_action_removeAppointment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../store/action/removeAppointment */ "./src/store/action/removeAppointment.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
 
-var _templateObject;
+var _templateObject,
+    _s = __webpack_require__.$Refresh$.signature();
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 
 
-var StyledCard = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral([" "])));
+
+
+var StyledCard = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div(_templateObject || (_templateObject = _taggedTemplateLiteral([" "])));
 _c = StyledCard;
 
 var Card = function Card(props) {
+  _s();
+
+  var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_2__.useDispatch)();
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(StyledCard, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "card-list"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", {
     className: "card-title"
   }, props.date), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
     className: "card-description"
-  }, props.doctorName, props.id), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-    className: "remove-card"
+  }, props.doctorName), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    className: "card-btn",
+    onClick: function onClick() {
+      dispatch((0,_store_action_removeAppointment__WEBPACK_IMPORTED_MODULE_1__.removeAppointment)(props.id));
+    }
   }, "remove")));
 };
+
+_s(Card, "rgTLoBID190wEKCp9+G8W6F7A5M=", false, function () {
+  return [react_redux__WEBPACK_IMPORTED_MODULE_2__.useDispatch];
+});
 
 _c2 = Card;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_c3 = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.memo)(Card));
@@ -7165,7 +7181,8 @@ if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Pr
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "USER_ACTIONS": () => (/* binding */ USER_ACTIONS)
+/* harmony export */   "USER_ACTIONS": () => (/* binding */ USER_ACTIONS),
+/* harmony export */   "APPOINTMENT_ACTIONS": () => (/* binding */ APPOINTMENT_ACTIONS)
 /* harmony export */ });
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
@@ -7174,6 +7191,9 @@ var USER_ACTIONS = {
   addUser: 'add new user',
   logOut: 'log out user',
   logIn: 'login user'
+};
+var APPOINTMENT_ACTIONS = {
+  removeAppointment: "remove the appointment"
 };
 
 const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
@@ -7329,6 +7349,48 @@ if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Pr
 
 /***/ }),
 
+/***/ "./src/store/action/removeAppointment.js":
+/*!***********************************************!*\
+  !*** ./src/store/action/removeAppointment.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "removeAppointment": () => (/* binding */ removeAppointment)
+/* harmony export */ });
+/* harmony import */ var _actionType__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actionType */ "./src/store/actionType.js");
+/* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
+__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
+
+
+var removeAppointment = function removeAppointment(id) {
+  return {
+    type: _actionType__WEBPACK_IMPORTED_MODULE_0__.APPOINTMENT_ACTIONS.removeAppointment,
+    payload: {
+      id: id
+    }
+  };
+};
+
+const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
+const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
+	$ReactRefreshModuleId$
+);
+
+function $ReactRefreshModuleRuntime$(exports) {
+	if (false) {}
+}
+
+if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Promise) {
+	$ReactRefreshCurrentExports$.then($ReactRefreshModuleRuntime$);
+} else {
+	$ReactRefreshModuleRuntime$($ReactRefreshCurrentExports$);
+}
+
+/***/ }),
+
 /***/ "./src/store/initStore.js":
 /*!********************************!*\
   !*** ./src/store/initStore.js ***!
@@ -7357,29 +7419,9 @@ __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/r
 
 
 var newUser = [];
-var doctorList = [{
-  doctorID: 9876,
-  doctorName: "Jon Tern",
-  doctorPosition: "dentist"
-}, {
-  doctorID: 9877,
-  doctorName: "Mary Smith",
-  doctorPosition: "dentist"
-}, {
-  doctorID: 9878,
-  doctorName: "Alex Smirnov",
-  doctorPosition: "dentist"
-}, {
-  doctorID: 9879,
-  doctorName: "Anna Braun",
-  doctorPosition: "dentist"
-}];
 var initialState = {
   userReducer: {
     user: newUser
-  },
-  doctorReducer: {
-    doctor: doctorList
   }
 };
 var persistConfig = {
@@ -7423,8 +7465,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _actionType__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actionType */ "./src/store/actionType.js");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
@@ -7438,6 +7487,7 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToAr
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
+
 var initialState = [];
 
 var appointmentReducer = function appointmentReducer() {
@@ -7448,7 +7498,18 @@ var appointmentReducer = function appointmentReducer() {
     case 'newAppointment':
       var newAppointmentList = _toConsumableArray(state);
 
-      newAppointmentList.push(action.payload);
+      newAppointmentList.push(_objectSpread(_objectSpread({}, action.payload), {}, {
+        id: Math.floor(Math.random() * 1000 + 1)
+      }));
+      return newAppointmentList;
+
+    case _actionType__WEBPACK_IMPORTED_MODULE_0__.APPOINTMENT_ACTIONS.removeAppointment:
+      newAppointmentList = _toConsumableArray(state);
+      var appointmentId = newAppointmentList.find(function (x) {
+        return x.id === action.payload.id;
+      });
+      var idAppointmentRemove = newAppointmentList.indexOf(appointmentId);
+      newAppointmentList.splice(idAppointmentRemove, 1);
       return newAppointmentList;
 
     default:
@@ -7495,7 +7556,26 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var initialState = {};
+var doctorList = [{
+  doctorID: 9876,
+  doctorName: "Jon Tern",
+  doctorPosition: "dentist"
+}, {
+  doctorID: 9877,
+  doctorName: "Mary Smith",
+  doctorPosition: "dentist"
+}, {
+  doctorID: 9878,
+  doctorName: "Alex Smirnov",
+  doctorPosition: "dentist"
+}, {
+  doctorID: 9879,
+  doctorName: "Anna Braun",
+  doctorPosition: "dentist"
+}];
+var initialState = {
+  doctorList: doctorList
+};
 
 var doctorReducer = function doctorReducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
@@ -7718,7 +7798,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/react-refresh/runtime.js */ "./node_modules/react-refresh/runtime.js");
 
 var doctorSelector = function doctorSelector(store) {
-  return store.doctorReducer.doctor;
+  return store.doctorReducer.doctorList;
 };
 
 const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
@@ -70507,4 +70587,4 @@ function toString(value) {
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=main.24609522cffd45a02258.js.map
+//# sourceMappingURL=main.27309889ef10f3ac41c8.js.map

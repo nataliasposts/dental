@@ -1,11 +1,15 @@
 import React, { useEffect, memo, useState, useContext } from "react";
 import styled from "styled-components";
+import { removeAppointment } from "../../store/action/removeAppointment";
+import { useDispatch } from 'react-redux';
 
 
 
 const StyledCard = styled.div` `
 
 const Card = (props) => {
+
+    const dispatch = useDispatch();
    
 
 
@@ -17,9 +21,8 @@ const Card = (props) => {
                 </h3>
                 <p className={"card-description"}>
                  {props.doctorName}
-                 {props.id}
                 </p>
-                <button className={"remove-card"}>remove</button>
+                <button className="card-btn" onClick={() => {dispatch(removeAppointment(props.id))}}>remove</button>
             </div>
         </StyledCard>
         ) 

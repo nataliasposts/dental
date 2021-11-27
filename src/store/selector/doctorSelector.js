@@ -1,3 +1,3 @@
 export const doctorSelector = store => {
-    return (store.doctorReducer.doctor);
+    return (store.doctorReducer.doctorList);
 };
