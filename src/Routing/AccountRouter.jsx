@@ -1,11 +1,11 @@
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import Account from "Scenes/Account/Account";
-import MyProfile from "Components/Accounts/MyProfile";
-import Appointment from "Components/Accounts/Appointment"
+import MyProfile from "Components/Account/MyProfile";
+import Appointment from "Components/Account/Appointment"
 import { PATHS, ROUTE } from "./routing";
-import Doctors from "../Components/Accounts/Doctors";
-import DoctorSchedule from "../Components/Accounts/DoctorSchedule";
+import Doctors from "../Components/Account/Doctors";
+import DoctorSchedule from "../Components/Account/DoctorSchedule";
 
 
 const AccountRouter = (props)=>{

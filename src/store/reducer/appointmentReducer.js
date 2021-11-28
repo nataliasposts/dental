@@ -10,7 +10,7 @@ const appointmentReducer = (state = initialState, action)=> {
         
         case  (APPOINTMENT_ACTIONS.removeAppointment):
             newAppointmentList = [...state];
-            const appointmentId = newAppointmentList.find(x => x.id === action.payload.id )
+            const appointmentId = newAppointmentList.find(x => x.id === action.payload.id)
             const idAppointmentRemove = newAppointmentList.indexOf(appointmentId);
             newAppointmentList.splice(idAppointmentRemove, 1);
             return newAppointmentList;

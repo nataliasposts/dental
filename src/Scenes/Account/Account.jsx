@@ -28,7 +28,7 @@ const StyledAccount = styled.div`
     padding: 15px 0;
 }
 .section{
-    width: 100%;
+    width: 75%;
     margin-top: 55px
 }
 .account-btn{
@@ -72,8 +72,7 @@ const Account = (props) =>{
                         <ul className={"account-list"}>
                             <li className={"account-list_item"}>
                             <Link to={PATHS.PROFILE(urlParams.userId)} className={"account-link"}>
-                                <div className={"list-item_title"}>
-                                   
+                                <div className={"list-item_title"}>  
                                     <p>Account</p>
                                 </div>
                             </Link>                               
@@ -88,7 +87,7 @@ const Account = (props) =>{
                             <li>
                             <Link to={PATHS.DOCTOR(urlParams.userId)} className={"account-link"}>
                                 <div className={"list-item_title"}>                                    
-                                    <p>Doctors</p>
+                                    <p>Book appointment</p>
                                 </div>
                             </Link>                             
                             </li>

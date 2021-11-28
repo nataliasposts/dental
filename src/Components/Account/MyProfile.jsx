@@ -4,11 +4,7 @@ import { userSelector } from "../../store/selector/userSelector";
 import styled from "styled-components";
 
 const StyledMyProfile = styled.div`
-.profile-row{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
+
 .profile-description{
     padding: 30px;
     margin-bottom: 30px;
@@ -42,7 +38,6 @@ const MyProfile = (props) =>{
     
     return(
         <StyledMyProfile>
-            <div className={"profile-row"}>
                 <div className={"profile-description"}>
                     <div className={"profile-name"}>
                         <h3 className={"user-name"}>
@@ -57,12 +52,6 @@ const MyProfile = (props) =>{
                         </div>
                     </div>
                     </div>
-                    <div className={"profile-content"}>
-                        <div className={"user-appointment"}>
-                            Appointments
-                        </div>
-                    </div>
-            </div>
         </StyledMyProfile>
 
     )

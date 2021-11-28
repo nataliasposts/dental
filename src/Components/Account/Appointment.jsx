@@ -6,7 +6,19 @@ import Card from "./Card";
 
 
 
-const StyledAppointment = styled.div``
+const StyledAppointment = styled.div`
+.appointment-title h3{
+    font-size: 30px;
+    color: #2f89fc;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 50px;
+}
+appointment-row{
+    display: flex;
+    flex-direction: column;
+}
+`
 
 
 const Appointment = (props) => {
@@ -15,10 +27,13 @@ const Appointment = (props) => {
 
     return(
         <StyledAppointment>
-             <div className={"appointment-row"}>
+            <div className={"appointment-container"}>
                 <div className={"appointment-title"}>
+                    <h3>Your appoitments</h3>
+                </div>
+             <div className={"appointment-row"}>
                     {appointFind.map((book, id)=>{
-                        const d = new Date(book.startDate);
+                        const d = new Date(book.bookedAppointment);
                         const date = d.toLocaleString('en-US');
                         return(
                             <div key={id}>
