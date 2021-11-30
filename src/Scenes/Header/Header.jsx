@@ -1,28 +1,27 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { Link, useHistory} from 'react-router-dom';
-import logo from '../assets/img/logo.png'
-import { PATHS } from "../Routing/routing";
-import ModalWindowRegistration from "../Components/ModalWindow/ModalWindowComponents/ModalWindowRegistration";
+import logo from "../../assets/img/logo.png"
+import { PATHS } from "../../Routing/routing";
+import ModalWindowRegistration from "../../Components/ModalWindow/ModalWindowComponents/ModalWindowRegistration";
 import { useDispatch, useSelector } from 'react-redux';
-import { userSelector } from '../store/selector/userSelector';
-import { logOutUser } from "../store/action/logOutUser";
-import ModalWindowLogin from '../Components/ModalWindow/ModalWindowComponents/ModalWindowLogin';
-import { ModalContext } from '../HOC/GlobalModalProvider';
+import { userSelector } from '../../store/selector/userSelector';
+import { logOutUser } from "../../store/action/logOutUser";
+import ModalWindowLogin from '../../Components/ModalWindow/ModalWindowComponents/ModalWindowLogin';
+import { ModalContext } from '../../HOC/GlobalModalProvider';
 
 
 
 const StyledHeader = styled.header`
 max-width: 100%;
-padding: 0 15px 0 15px;
-margin: auto;
 position: relative;
 z-index: 11;
 box-shadow: 0 0 10px rgb(0 0 0 / 10%);
 
 
+
 .header-container{
-    max-width: 1230px;
+    max-width: 1170px;
     margin: auto;
     padding: 0 15px;
 }
@@ -52,12 +51,17 @@ box-shadow: 0 0 10px rgb(0 0 0 / 10%);
 }
 .header-menu_link{
     text-decoration: none;
-    font-size: 20px;
+    font-size: 25px;
     line-height: 20px;
     color: rgb(42, 44, 49);
     cursor: pointer;
-    font-family: 'Merriweather-Regular', sans-serif; 
+    font-family: 'Roboto-Regular', sans-serif; 
     background-color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.header-menu_link:hover{
+    color: #ff8000;
 }
 .header-logo_img{
     width: 50%;
@@ -71,6 +75,12 @@ box-shadow: 0 0 10px rgb(0 0 0 / 10%);
     text-transform: uppercase;
     border: none;
     border-radius: 50px;
+    font-family: 'Roboto-Regular', sans-serif; 
+    cursor: pointer;
+    transition: 400ms;
+}
+.log-btn:hover{
+    transform: scale(1.1, 1.1);
 }
 `
 
@@ -134,11 +144,11 @@ const Header = (props) => {
                                         dispatch(logOutUser());
                                         history.push("/main");
                                         }}>
-                                            Logout
+                                            Log out
                                 </button>
                                 : <button className={"log-btn"}
                                    onClick={() => {setModalContent(<ModalWindowLogin/>)}} >
-                                       Login
+                                       Log in
                                 </button>}
                             </div>
                         </div>

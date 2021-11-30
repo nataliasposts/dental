@@ -18,10 +18,12 @@ const StyledDoctors = styled.div`
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 20px;
+    font-family: 'Roboto-Regular', sans-serif;  
 }
 .description{
     text-align: center;
     font-size: 20px;
+    font-family: 'Roboto-Light', sans-serif; 
 }
 .doctors-row{
     display: flex;
@@ -42,9 +44,11 @@ const StyledDoctors = styled.div`
 .doctor-name{
     margin-bottom: 10px;
     font-size: 20px;
+    font-family: 'Roboto-Regular', sans-serif; 
 }
 .doctor-position{
     font-size: 15px;
+    font-family: 'Roboto-Regular', sans-serif;  
 }
 
 `

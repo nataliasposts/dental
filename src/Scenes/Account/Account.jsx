@@ -10,10 +10,12 @@ import { PATHS } from "Routing/routing";
 
 
 const StyledAccount = styled.div`
+flex: 1 0 auto;
+
 .account-container{
     max-width: 1170px;
-    padding: 0 15px;
     margin: auto;
+    padding: 0 15px;
     position: relative;
     z-index: 1;
 }
@@ -45,6 +47,11 @@ const StyledAccount = styled.div`
     border: none;
     font-size: 14px;
     margin-top: 55px;
+    font-family: 'Roboto-Regular', sans-serif; 
+    transition: 400ms;
+}
+.account-btn:hover{
+    transform: scale(1.1, 1.1);
 }
 .account-list_item{
     margin-bottom: 15px;
@@ -52,6 +59,12 @@ const StyledAccount = styled.div`
 .list-item_title{
     font-size: 20px;
     color: black;
+    font-family: 'Roboto-Regular', sans-serif; 
+    cursor: pointer;
+    transition: 0.3s;
+}
+.list-item_title:hover{
+    color: #ff8000;
 }
 `
 

@@ -8,11 +8,25 @@
     box-sizing: border-box;
 }
 
-
-@font-face {
-	font-family: 'Merriweather-Regular'; 
-	src: local('Merriweather-Regular'),
-		url(/src/assets/fonts/Merriweather-Regular.ttf); 
+html, body {
+    max-width: 100%; 
+    overflow-x: hidden; 
 }
 
 
+@font-face {
+    font-family: 'Roboto-Light';
+    src: local('Roboto-Light'),
+         url(/src/assets/fonts/Roboto/Roboto-Light.ttf)
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: local('Roboto-Regular'),
+         url(/src/assets/fonts/Roboto/Roboto-Regular.ttf)
+}
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: local('Roboto-Medium'),
+         url(/src/assets/fonts/Roboto/Roboto-Medium.ttf)
+}

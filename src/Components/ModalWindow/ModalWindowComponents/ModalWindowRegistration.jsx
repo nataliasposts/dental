@@ -20,6 +20,7 @@ margin-bottom: 15px;
     font-size: 25px;
     margin-bottom: 20px;
     color: #2f89fc;
+    font-family: 'Roboto-Regular', sans-serif; 
 }
 .btn-registration{
     color: #F6F5F3;
@@ -31,6 +32,11 @@ margin-bottom: 15px;
     border-radius: 50px;
     text-align: center;
     margin: 20px 0 20px 0; 
+    font-family: 'Roboto-Regular', sans-serif; 
+    transition: 400ms;
+}
+.btn-registration:hover{
+    transform: scale(1.1, 1.1);
 }
 .btn-login{
     color: #F6F5F3;
@@ -41,7 +47,13 @@ margin-bottom: 15px;
     border: none;
     border-radius: 50px;
     text-align: center;
+    font-family: 'Roboto-Regular', sans-serif; 
+    transition: 400ms;
 }
+.btn-login:hover{
+    transform: scale(1.1, 1.1);
+}
+    
 `
 const ModalWindowRegistration = (props)=>{
   

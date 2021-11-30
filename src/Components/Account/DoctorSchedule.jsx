@@ -10,16 +10,22 @@ import styled from "styled-components";
 import { appointmentDateValidation } from "./appointmentDateValidation";
 
 const StyledDoctorSchedule = styled.div`
-.title {
+
+.doctorschedule-title{
+    margin-bottom: 50px;
+}
+.title{
     font-size: 30px;
     color: #2f89fc;
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 20px;
+    font-family: 'Roboto-Regular', sans-serif; 
 }
 .description{
     text-align: center;
     font-size: 20px;
+    font-family: 'Roboto-Light', sans-serif; 
 }
 .doctorschedule-btn{
     background: #ff8000;
@@ -36,6 +42,11 @@ const StyledDoctorSchedule = styled.div`
     font-size: 14px;
     width: 180px; 
     margin-left: 20px;
+    font-family: 'Roboto-Regular', sans-serif; 
+    transition: 400ms;
+}
+.doctorschedule-btn:hover{
+    transform: scale(1.1, 1.1);
 }
 .doctorschedule-row{
     display: flex;
@@ -53,8 +64,6 @@ const DoctorSchedule = (props)=>{
     const currentDoctor = doctors.find(doctor => doctor.doctorID == params.doctorID);
     
    
-  
-
 
 
       return (
@@ -68,7 +77,7 @@ const DoctorSchedule = (props)=>{
              initialValues={{ appointmentDate: '' }}
              onSubmit={(formDate) => {
                  dispatch({type: "newAppointment", 
-                 payload: {bookedAppointment: formDate.appointmentDate, user: params.userId, doctor: params.doctorID, doctorName: currentDoctor.doctorName}});
+                 payload: {appointmentDate: formDate.appointmentDate, user: params.userId, doctor: params.doctorID, doctorName: currentDoctor.doctorName}});
                  history.push(PATHS.APPOINTMENT(params.userId))
             }}
              validate={appointmentDateValidation}

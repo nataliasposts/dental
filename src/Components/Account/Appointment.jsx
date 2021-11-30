@@ -13,6 +13,7 @@ const StyledAppointment = styled.div`
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 50px;
+    font-family: 'Roboto-Regular', sans-serif; 
 }
 appointment-row{
     display: flex;
@@ -33,7 +34,7 @@ const Appointment = (props) => {
                 </div>
              <div className={"appointment-row"}>
                     {appointFind.map((book, id)=>{
-                        const d = new Date(book.bookedAppointment);
+                        const d = new Date(book.appointmentDate);
                         const date = d.toLocaleString('en-US');
                         return(
                             <div key={id}>

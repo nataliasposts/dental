@@ -5,12 +5,13 @@ import styled from "styled-components";
 
 const StyledFormikInputLogin = styled.div`
 
-
 .input-label{
     display: block;
     font-size: 20px;
     color: #212020;
     margin-bottom: 10px;
+    font-family: 'Roboto-Regular', sans-serif; 
+    
 }
 .input-form{
     width: 400px;
@@ -19,6 +20,8 @@ const StyledFormikInputLogin = styled.div`
     border: 1px solid #212020;
     border-radius: 4px;
     margin-top: 10px;
+    font-family: 'Roboto-Light', sans-serif; 
+    cursor: pointer;
 }
 `;
 

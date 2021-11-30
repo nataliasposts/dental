@@ -14,6 +14,8 @@ const StyledDatePicker = styled.div`
     padding: 10px;
     border: 1px solid #212020;
     border-radius: 4px;
+    font-family: 'Roboto-Light', sans-serif; 
+    cursor: pointer;
 }
 `
 

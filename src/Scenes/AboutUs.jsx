@@ -1,6 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
-import aboutus from 'assets/img/aboutus.jpg';
+import aboutus from "../assets/img/aboutus.jpg"
 import { Link } from 'react-router-dom';
 
 
@@ -9,10 +9,10 @@ import { Link } from 'react-router-dom';
 
 const StyledAboutUs = styled.div`
 max-width: 100%;
-padding: 155px 0 137px 0;
+padding: 125px 0 95px 0;
 
 .aboutus-container{
-    max-width: 1230px;
+    max-width: 1170px;
     margin: auto;
     padding: 0 15px;
 }
@@ -24,7 +24,7 @@ padding: 155px 0 137px 0;
     max-width: 50%;
 }
 .img{
-    width: 800px;
+    width: 700px;
 }
 .aboutus-row_info{
     display: flex;
@@ -34,18 +34,19 @@ padding: 155px 0 137px 0;
     background-color: white;
     padding: 30px;
 }
-.aboutus-title{
+.aboutus-title h3{
     text-transform: uppercase;
     font-size: 40px;
     margin-bottom: 30px;
     color: #2f89fc;
     text-align: center;
+    font-family: 'Roboto-Regular', sans-serif; 
 }
-.aboutus-description{
+.aboutus-description p{
     font-size: 20px;
-    margin-bottom: 30px;
     color: #292744;
     text-align: justify;
+    font-family: 'Roboto-Light', sans-serif; 
 }
 .aboutus-btn{
     background: #ff8000;
@@ -59,6 +60,11 @@ padding: 155px 0 137px 0;
     border-radius: 50px;
     margin: auto;
     cutsor: pointer;
+    font-family: 'Roboto-Regular', sans-serif; 
+    transition: 400ms;
+}
+.aboutus-btn:hover{
+    transform: scale(1.1, 1.1);
 }
 `;
 

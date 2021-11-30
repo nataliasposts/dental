@@ -11,12 +11,15 @@ const StyledFormikData = styled.div`
     border: 1px solid #212020;
     border-radius: 4px;
     margin-top: 10px;
+    font-family: 'Roboto-Light', sans-serif; 
+    cursor: pointer;
 }
 .input-label{
     display: block;
     font-size: 20px;
     color: #212020;
     margin-bottom: 10px;
+    font-family: 'Roboto-Regular', sans-serif; 
 }
 `;
 

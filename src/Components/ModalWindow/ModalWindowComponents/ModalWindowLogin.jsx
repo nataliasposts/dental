@@ -24,8 +24,9 @@ margin-bottom: 15px;
     font-size: 25px;
     margin-bottom: 20px;
     color: #2f89fc;
+    font-family: 'Roboto-Regular', sans-serif; 
 }
-.btn-registartion{
+.registartion-btn{
     color: #F6F5F3;
     padding: 10px 30px;
     cursor: pointer;
@@ -34,6 +35,11 @@ margin-bottom: 15px;
     border: none;
     border-radius: 50px;
     text-align: center;
+    font-family: 'Roboto-Regular', sans-serif; 
+    transition: 400ms;
+}
+.registartion-btn:hover{
+    transform: scale(1.1, 1.1);
 }
 .login-btn{
     color: #F6F5F3;
@@ -45,6 +51,11 @@ margin-bottom: 15px;
     border-radius: 50px;
     text-align: center;
     margin: 20px 0 20px 0;
+    font-family: 'Roboto-Regular', sans-serif; 
+    transition: 400ms;
+}
+.login-btn:hover{
+    transform: scale(1.1, 1.1);
 }
 `
 const ModalWindowLogin = (props)=>{
@@ -88,7 +99,7 @@ const ModalWindowLogin = (props)=>{
                      <button type={"submit"} className={"login-btn"}> Log in</button>
                 </Form>
             </Formik>
-            <button className={"btn-registartion"} onClick={() => {setModalContent(<ModalWindowRegistration/>)}}>
+            <button className={"registartion-btn"} onClick={() => {setModalContent(<ModalWindowRegistration/>)}}>
                 Registration
             </button>
         </StyledModalWindowLogin>

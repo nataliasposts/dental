@@ -12,10 +12,11 @@ padding: 155px 0 157px 0;
 background-image: url(${background});
 background-repeat: no-repeat;
 background-size: cover;
-height: 100vh;
+height: 900px;
+
 
 .firstscreen-container{
-    max-width: 1230px;
+    max-width: 1170px;
     margin: auto;
     padding: 0 15px;
 }
@@ -32,17 +33,20 @@ height: 100vh;
     font-size: 60px;
     color: #2f89fc;
     text-transform: capitalize;
+    font-family: 'Roboto-Regular', sans-serif; 
 }
 .firstscreen-title_black{
     font-size: 60px;
     text-transform: capitalize;
     display: block;
+    font-family: 'Roboto-Regular', sans-serif; 
 }
 .firstscreen-description p{
     margin-bottom: 30px;
     font-size: 18px;
     text-transform: uppercase;
     color: rgba(0, 0, 0, 0.8);
+    font-family: 'Roboto-Light', sans-serif; 
 }
 .book-appointment_btn{
     background: #ff8000;
@@ -54,6 +58,12 @@ height: 100vh;
     text-transform: uppercase;
     border: none;
     border-radius: 50px;
+    font-family: 'Roboto-Regular', sans-serif; 
+    cursor: pointer;
+    transition: 400ms;
+}
+.book-appointment_btn:hover{
+    transform: scale(1.1, 1.1);
 }
 `;
 

@@ -20,10 +20,12 @@ cursor: pointer;
 .card-date{
     font-size: 20px;
     margin-bottom: 15px;
+    font-family: 'Roboto-Regular', sans-serif; 
 }
 .card-doctor{
     font-size: 20px;
     margin-bottom: 30px;
+    font-family: 'Roboto-Regular', sans-serif; 
 }
 .card-btn{
     background: #ff8000;
@@ -40,6 +42,7 @@ cursor: pointer;
     font-size: 14px;
     width: 180px;
     align-self: center;
+    font-family: 'Roboto-Regular', sans-serif; 
 }
  `
 

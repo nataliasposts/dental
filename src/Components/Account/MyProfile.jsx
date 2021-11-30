@@ -12,12 +12,25 @@ const StyledMyProfile = styled.div`
     flex-direction: row;
     justify-content: space-around;
     border-bottom: solid 2px #ff8000;
+
 }
 .firstname{
     margin-right: 10px;
+    font-family: 'Roboto-Regular', sans-serif; 
+    font-size: 20px;
+}
+.secondname{
+    font-family: 'Roboto-Regular', sans-serif; 
+    font-size: 20px;
 }
 .birthday-title{
     margin-bottom: 10px;
+    font-family: 'Roboto-Regular', sans-serif; 
+    font-size: 20px;
+}
+.birthday-date{
+    font-family: 'Roboto-Regular', sans-serif; 
+    font-size: 15px;
 }
 `
 
